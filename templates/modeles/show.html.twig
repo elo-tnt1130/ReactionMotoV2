@@ -1,0 +1,248 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modeles
+{% endblock %}
+
+{% block body %}
+	<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4 p-4">
+		<div class="col-12">
+			<h1>Modèle -
+				{# {{ modele.libMarque }} #}
+				{{ modele.libModele }}</h1>
+			<a href="{{ path('modeles_index') }}" class="btn btn-info">
+				<i class="fa fa-arrow-left"></i>
+				Retour à la liste
+			</a>
+		</div>
+
+		<div class="container my-3">
+
+			{% if modele.checkOccasion ? false : true %}
+				<table class="table table-hover table-striped">
+					<tbody>
+						<tr>
+							<th class="cellwidthimg">Image principale</th>
+							<td>
+								{% if modele.img1Moto !="" %}
+									<img src="/img/{{ modele.img1Moto }}" alt="{{ modele.libModele }}" class="img-prez img-fluid mx-auto">
+								{% else %}
+									<img src="/img/default.png" alt="default_image" class="img-prez img-fluid mx-auto">
+								{% endif  %}
+							</td>
+
+							<th class="cellwidthimg">Image 2</th>
+							<td>
+								{% if modele.img2Moto !="" %}
+									<img src="/img/{{ modele.img2Moto }}" alt="{{ modele.libModele }}" class="img-prez img-fluid mx-auto">
+								{% else %}
+									<img src="/img/default.png" alt="default_image" class="img-prez img-fluid mx-auto">
+								{% endif  %}
+							</td>
+						</tr>
+						<tr>
+							<th class="cellwidthimg">Image 3</th>
+							<td>
+								{% if modele.img3Moto !="" %}
+									<img src="/img/{{ modele.img3Moto }}" alt="{{ modele.libModele }}" class="img-prez img-fluid mx-auto">
+								{% else %}
+									<img src="/img/default.png" alt="default_image" class="img-prez img-fluid mx-auto">
+								{% endif  %}
+							</td>
+
+							<th class="cellwidthimg">Image 4</th>
+							<td>
+								{% if modele.img4Moto !="" %}
+									<img src="/img/{{ modele.img4Moto }}" alt="{{ modele.libModele }}" class="img-prez img-fluid mx-auto">
+								{% else %}
+									<img src="/img/default.png" alt="default_image" class="img-prez img-fluid mx-auto">
+								{% endif  %}
+							</td>
+						</tr>
+
+						<tr>
+							<th class="cellwidthimg">Marque</th>
+							<td colspan="3">{{ modele.marque }}</td>
+						</tr>
+
+						<tr>
+							<th class="cellwidthimg">Modèle</th>
+							<td colspan="3">{{ modele.libModele }}</td>
+						</tr>
+
+						<tr>
+							<th class="cellwidthimg">Permis</th>
+							<td colspan="3">{{ modele.permis }}</td>
+						</tr>
+
+						<tr>
+							<th class="cellwidthimg">Description</th>
+							<td colspan="3">{{ modele.descrNeuf|raw }}</td>
+						</tr>
+
+						<tr>
+							<th class="cellwidthimg">Moteur</th>
+							<td colspan="3">{{ modele.moteur|raw }} cm3</td>
+						</tr>
+
+						<tr>
+							<th class="cellwidthimg">Longueur</th>
+							<td colspan="3">{{ modele.longueurNeuf }} {% if modele.longueurNeuf != "" %}mm{% endif %}</td>
+						</tr>
+
+						<tr>
+							<th class="cellwidthimg">Largeur</th>
+							<td colspan="3">{{ modele.largeurNeuf }} {% if modele.largeurNeuf != "" %}mm{% endif %}</td>
+						</tr>
+
+						<tr>
+							<th class="cellwidthimg">Hauteur de selle</th>
+							<td colspan="3">{{ modele.hauteurSelleNeuf }} {% if modele.hauteurSelleNeuf != "" %}mm{% endif %}</td>
+						</tr>
+						
+						<tr>
+							<th class="cellwidthimg">Poids</th>
+							<td colspan="3">{{ modele.poidsNeuf }} {% if modele.hauteurSelleNeuf != "" %}kg{% endif %}</td>
+						</tr>
+
+						<tr>
+							<th class="cellwidthimg">Consommation</th>
+							<td colspan="3">{{ modele.consoNeuf }}  {% if modele.consoNeuf != "" %}L/100km{% endif %}</td>
+						</tr>
+
+						<tr>
+							<th class="cellwidthimg">Aides à la conduite</th>
+							<td colspan="3">
+								<ul>
+									{% for aideConduite in modele.aidesConduite %}
+										<li>{{ aideConduite }}</li>
+									{% endfor %}
+								</ul>
+							</td>
+						</tr>
+
+						<tr>
+							<th class="cellwidthimg">Couleurs</th>
+							<td colspan="3">
+								<ul>
+									{% for couleur in modele.couleurs %}
+										<li>{{ couleur }}</li>
+									{% endfor %}
+								</ul>
+							</td>
+						</tr>
+
+						<tr>
+							<th class="cellwidthimg">Fiche technique</th>
+							<td colspan="3">{{ modele.ficheTechniqueNeuf }}</td>
+						</tr>
+
+						<tr>
+							<th class="cellwidthimg">Prix</th>
+							<td colspan="3">{{ modele.prixMoto }} €</td>
+						</tr>
+
+					</tbody>
+				</table>
+			{% endif %}
+
+			{% if modele.checkOccasion ? true : false %}
+				<table class="table table-hover table-striped">
+					<tbody>
+
+						<tr>
+							<th class="cellwidthimg">Image principale</th>
+							<td>
+								{% if modele.img1Moto !="" %}
+									<img src="/img/{{ modele.img1Moto }}" alt="{{ modele.libModele }}" class="img-prez img-fluid mx-auto">
+								{% else %}
+									<img src="/img/default.png" alt="default_image" class="img-prez img-fluid mx-auto">
+								{% endif  %}
+							</td>
+						</tr>
+						<tr>
+							<th class="cellwidthimg">Image 2</th>
+							<td>
+								{% if modele.img2Moto !="" %}
+									<img src="/img/{{ modele.img2Moto }}" alt="{{ modele.libModele }}" class="img-prez img-fluid mx-auto">
+								{% else %}
+									<img src="/img/default.png" alt="default_image" class="img-prez img-fluid mx-auto">
+								{% endif  %}
+							</td>
+						</tr>
+						<tr>
+							<th class="cellwidthimg">Image 3</th>
+							<td>
+								{% if modele.img3Moto !="" %}
+									<img src="/img/{{ modele.img3Moto }}" alt="{{ modele.libModele }}" class="img-prez img-fluid mx-auto">
+								{% else %}
+									<img src="/img/default.png" alt="default_image" class="img-prez img-fluid mx-auto">
+								{% endif  %}
+							</td>
+						</tr>
+						<tr>
+							<th class="cellwidthimg">Image 4</th>
+							<td>
+								{% if modele.img4Moto !="" %}
+									<img src="/img/{{ modele.img4Moto }}" alt="{{ modele.libModele }}" class="img-prez img-fluid mx-auto">
+								{% else %}
+									<img src="/img/default.png" alt="default_image" class="img-prez img-fluid mx-auto">
+								{% endif  %}
+							</td>
+						</tr>
+
+						<tr>
+							<th class="cellwidthimg">Marque</th>
+							<td colspan="3">{{ modele.marque }}</td>
+						</tr>
+						<tr>
+							<th class="cellwidthimg">Modèle</th>
+							<td colspan="3">{{ modele.libModele }}</td>
+						</tr>
+
+						<tr>
+							<th class="cellwidthimg">Permis</th>
+							<td colspan="3">{{ modele.permis }}</td>
+						</tr>
+
+						<tr>
+							<th class="cellwidthimg">Description de l'occasion</th>
+							<td colspan="3">{{ modele.descrOccasion|raw }}</td>
+						</tr>
+						<tr>
+							<th class="cellwidthimg">Lien LBC</th>
+							<td colspan="3">{{ modele.lienOccasion }}</td>
+						</tr>
+						<tr>
+							<th class="cellwidthimg">Travaux effectués</th>
+							<td colspan="3">{{ modele.travauxOccasion|raw }}</td>
+						</tr>
+						<tr>
+							<th class="cellwidthimg">Equipements</th>
+							<td colspan="3">{{ modele.equipementsOccasion|raw }}</td>
+						</tr>
+						<tr>
+							<th class="cellwidthimg">Kilométrage</th>
+							<td colspan="3">{{ modele.kilometrageOccasion }} km</td>
+						</tr>
+						<tr>
+							<th class="cellwidthimg">Prix</th>
+							<td colspan="3">{{ modele.prixMoto }} €</td>
+						</tr>
+
+					</tbody>
+				</table>
+			{% endif %}
+
+		</div>
+
+				<div class="container">
+			<div class="row">
+				<a href="{{ path('modeles_edit', {'id': modele.id})}}" class="btn btn-info mr-3">
+					<i class="fa fa-pen"></i>
+					Modifier</a>
+
+				{{ include('modeles/_delete_form.html.twig') }}
+			</div>
+		</div>
+	</main>
+{% endblock %}

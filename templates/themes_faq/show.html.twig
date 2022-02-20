@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Thèmes du FAQ{% endblock %}
+
+{% block body %}
+
+	<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4 p-4">
+		<div class="col-12">
+			<h1>Thème du FAQ -
+				{{ themes_faq.themeQuestion }}</h1>
+			<a href="{{ path('themes_faq_index') }}" class="btn btn-info">
+				<i class="fa fa-arrow-left"></i>
+				Retour à la liste
+			</a>
+		</div>
+
+		<div class="container my-3">
+			<table class="table">
+				<tbody>
+					<tr>
+						<th class="cellwidth">Thème :</th>
+						<td>{{ themes_faq.themeQuestion }}</td>
+					</tr>
+				</tbody>
+			</table>
+
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<a href="{{ path('themes_faq_edit', {'id': themes_faq.id})}}" class="btn btn-info mr-3">
+					<i class="fa fa-pen"></i>
+					Modifier</a>
+
+				{{ include('themes_faq/_delete_form.html.twig') }}
+			</div>
+		</div>
+	</main>
+
+{% endblock %}

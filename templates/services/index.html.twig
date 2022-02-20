@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Services
+{% endblock %}
+
+{% block body %}
+	<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4 mb-3">
+ 		{{parent()}}
+		<div class="container-fluid m-2">
+			<div class="row d-flex justify-content-between mb-3">
+				<h1 class="my-2">Services et catégories de pages</h1>
+				<a href="{{ path('services_new') }}" class="btn btn-info align-self-center mr-4">
+					<i class="fa fa-plus"></i>
+					Ajouter</a>
+			</div>
+
+			<div class="container-fluid m-2">
+
+				<p class='alert-info p-3'>
+					<i class="fa fa-info-circle"></i>
+					Le contenu de cette page permet de définir sur quelle page de services (restauration, passage au banc, entretien, préparation et personnalisation) les forfaits seront affichés.</p>
+
+				<table class="table table-hover table-striped">
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>Services et catégories de pages</th>
+							<th colspan="2">Actions</th>
+						</tr>
+					</thead>
+					<tbody>
+						{% for service in services %}
+							<tr>
+								<td>{{ service.id }}</td>
+								<td>{{ service.libService }}</td>
+								<td>
+									<a href="{{ path('services_edit', {'id': service.id}) }}" class="btn btn-info">
+										<i class="fa fa-pen"></i>
+										Modifier</a>
+									<a href="{{ path('services_delete', {'id': service.id}) }}" class="btn btn-danger">
+										<i class="fa fa-trash-alt"></i>
+										Supprimer</a>
+								</td>
+							</tr>
+						{% else %}
+							<tr>
+								<td colspan="3">no records found</td>
+							</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</main>
+
+{% endblock %}

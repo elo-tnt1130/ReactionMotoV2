@@ -1,0 +1,78 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modifier l'utilisateur{% endblock %}
+
+{% block body %}
+
+	<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4 mb-3">
+		<div class="col-12">
+			<h1>Modifier l'utilisateur -
+				{{ user.pseudo }}</h1>
+			<a href="{{ path('user_index') }}" class="btn btn-info">
+				<i class="fa fa-arrow-left"></i>
+				Retour à la liste
+			</a>
+		</div>
+
+		<div class="container mt-3">
+
+			{{ form_start(form)}}
+
+			<div class="mb-3">
+				{{form_label (form.pseudo)}}
+				<font style="color:red">*</font>
+				{{form_widget (form.pseudo)}}
+			</div>
+
+			<div class="mb-3">
+				{{form_label (form.roles)}}
+				<font style="color:red">*</font>
+				{{form_widget (form.roles)}}
+			</div>
+
+			<div class="mb-3">
+				{{form_label (form.prenom_user)}}
+                <font style="color:red">*</font>
+				{{form_widget (form.prenom_user)}}
+			</div>
+
+			<div class="mb-3">
+				{{form_label (form.nom_user)}}
+                <font style="color:red">*</font>
+				{{form_widget (form.nom_user)}}
+			</div>
+
+			<div class="mb-3">
+				{{form_label (form.password)}}
+                <font style="color:red">*</font>
+				{{form_widget (form.password)}}
+			</div>
+
+			<div class="mb-3">
+				{{form_label (form.avatar_user)}}
+				<div>
+					{% if user.avatarUser !="" %}
+						<img src="/img/{{ user.avatarUser }}" alt="avatar-{{ user.pseudo }}" class="mb-2 img-edit">
+					{% else %}
+						<img src="/img/default-user.png" alt="default_image" class="mb-2 img-edit">
+					{% endif %}
+					{{form_widget (form.avatar_user)}}
+					{{form_help (form.avatar_user)}}
+				</div>
+			</div>
+
+			{{ form_rest(form)}}
+			<div class="row mt-3">
+				<button type="submit" class="btn btn-info mr-2">
+					<i class="fa fa-pen"></i>
+					Modifier</button>
+				<a href="{{path('user_delete', {'id':user.id})}}" class="btn btn-danger mr-2">
+					<i class="fa fa-trash"></i>
+					Supprimer</a>
+			</div>
+			{{ form_end(form)}}
+
+		</div>
+
+	</main>
+{% endblock %}

@@ -1,0 +1,185 @@
+{% extends 'base_front.html.twig' %}
+
+{% block meta %}
+	<meta name="description" content="{{page.metadescr}}">
+	<meta name="keywords" content="{{page.metakw}}">
+{% endblock %}
+
+{% block title %}
+	{{page.libPage}}
+{% endblock %}
+
+{% block body %}
+	<section class="carousel-restore position w-100 d-none d-md-flex" id="carrouselHome">
+
+		<div id="carouselHome" class="carousel slide carousel-restore carousel-fade" data-ride="carousel">
+			<ol class="carousel-indicators carousel-home">
+				{% for image in carrousel %}
+					<li data-target="#carouselHome" data-slide-to="{{loop.revindex0}}" {% if loop.index0 == 0 %} class="active" {% endif %}></li>
+				{% endfor %}
+			</ol>
+			<div class="carousel-inner carousel-restore">
+				{% for image in carrousel %}
+					{% if loop.index0 == 0 %}
+						<div class="carousel-item active">
+						{% else %}
+							<div class="carousel-item">
+							{% endif %}
+
+							{% if image %}
+								<img src="/img/{{image.libImg}}" class="d-block img-carousel-home mx-auto" alt="/img/{{image.descrImg}}">
+							{% else %}
+								<img src="/img/default.png" class="d-block img-carousel-home mx-auto" alt="/img/default.png">
+							{% endif %}
+
+						</div>
+					{% endfor %}
+				</div>
+				<a class="carousel-control-prev" href="#carouselHome" role="button" data-slide="prev">
+					<i class='fa fa-chevron-left'></i>
+					<span class="sr-only">Précédent</span>
+				</a>
+				<a class="carousel-control-next" href="#carouselHome" role="button" data-slide="next">
+					<i class='fa fa-chevron-right'></i>
+				</span>
+				<span class="sr-only">Suivant</span>
+			</a>
+		</div>
+	</section>
+
+	<section class="row justify-content-center px-4 py-2 welcome-text position d-none d-md-flex" id="textWelcome">
+		<div class="w-100 mx-4 pr-4 mt-3">
+			<p>{{ets.texteAccueil|raw}}</p>
+		</div>
+	</section>
+
+
+	<main
+		class="container d-flex row justify-content-around pb-5 container-home mb-5 pt-2 position">
+
+		<!-- SHORT RESUMES -->
+		<div
+			class="col-md-8 col-sm-12">
+			<h1></h1>
+			<!-- VENTE -->
+			<section class="d-flex row justify-content-around resumes">
+				<div class="col-12 mt-3">
+					<h2 class="subtitle">Vente</h2>
+				</div>
+
+				{% for marque in marques %}
+					<article class="col-md-4 col-sm-12 d-flex">
+						<div class="card my-2 special-welcome-cards align-self-stretch">
+							{% if marque.libMarque == 'Benelli' %}
+								<a href="{{path('page_benelli')}}">
+									<div class="card-body justify-content-center">
+										<img src="img/{{marque.logoMarque}}" class="card-img-top d-block mt-3 pt3 img-vente-home" alt="{{marque.libMarque}}">
+										<div class="mb-2">
+											<h3 class="card-title text-center subtitle2">
+												<font color='#cc0000'>
+													{{marque.libMarque}}
+												</font>
+											</h3>
+										</div>
+									</div>
+								</a>
+							{% elseif marque.libMarque == 'Brixton' %}
+								<a href="{{path('page_brixton')}}">
+									<div class="card-body justify-content-center">
+										<img src="img/{{marque.logoMarque}}" class="card-img-top d-block mt-3 pt3 img-vente-home" alt="{{marque.libMarque}}">
+										<div class="mb-2">
+											<h3 class="card-title text-center subtitle2">
+												<font color='#cc0000'>
+													{{marque.libMarque}}
+												</font>
+											</h3>
+										</div>
+									</div>
+								</a>
+							{% else %}
+								<a href="{{path('page_occasions')}}" class="align-self-stretch">
+									<div class="card-body justify-content-center">
+										<img src="img/{{marque.logoMarque}}" class="card-img-top d-block mt-3 pt3 img-vente-home" alt="{{marque.libMarque}}">
+										<div class="mb-2">
+											<h3 class="card-title text-center subtitle2">
+												<font color='#cc0000'>
+													{{marque.libMarque}}
+												</font>
+											</h3>
+										</div>
+									</div>
+								</a>
+							{% endif %}
+
+						</div>
+					</article>
+				{% endfor %}
+
+
+			</section>
+
+			<!-- SERVICES -->
+			<section class="d-flex row justify-content-center resumes">
+				<div class="d-flex row welcome-cards justify-content-center align-self-center mb-3">
+
+					{% for section in sections %}
+
+						{% if section.libPage == 'Restauration' or section.libPage == 'Entretien' or section.libPage == 'Préparation et personnalisation' or section.libPage == 'Banc de puissance' %}
+							<div class="col-12 d-flex row pt-2 mx-auto pt-2">
+								<div class='mx-2 row d-flex' style="background-color:#EEEEEE">
+
+									<div class="col-12 mt-3">
+										<h2 class="subtitle">{{section.libPage}}</h2>
+									</div>
+
+									<div class="col-md-3 col-sm-12 mb-3 align-self-center">
+										{% for image in section.services.images %}
+											{% if loop.first %}
+												{% if image %}
+													<img src="img/{{image.libImg}}" class="d-block mx-auto img-service-home mt-3 pt3" alt="{{image.descrImg}}">
+												{% else %}
+													<img src="img/default.png" class="d-block mx-auto img-service-home mt-3 pt3" alt="default.png">
+												{% endif %}
+											{% endif %}
+										{% endfor %}
+									</div>
+
+									<div class="col-md-9 col-sm-12 justify-content-center align-self-center">
+										<p>{{section.bloc1|truncate(155, true)}}</p>
+										<div class="text-right pb-2">
+											{% if section.libPage == 'Restauration' %}
+												<a href="{{path('page_restauration')}}" class="btn btn-danger card-btn stretched-link">
+												{% elseif section.libPage == 'Entretien' %}
+													<a href="{{path('page_entretien')}}" class="btn btn-danger card-btn stretched-link">
+													{% elseif section.libPage == 'Banc de puissance' %}
+														<a href="{{path('page_banc_puissance')}}" class="btn btn-danger card-btn stretched-link">
+														{% else %}
+															<a href="{{path('page_prepa_perso')}}" class="btn btn-danger card-btn stretched-link">
+															{% endif %}
+
+															En savoir plus
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+
+									{% endif %}
+								{% endfor %}
+
+							</div>
+
+						</div>
+					</section>
+
+				</div>
+
+				<!-- ACTUS -->
+				<div class="col-md-4 col-sm-12 mb-5 mb-1">
+					<!-- provided by facebook -->
+					<!-- <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D100057339113354&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false&appId=517094206385362" width="340" height="500" style="border:none; overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe> -->
+						<script src="https://apps.elfsight.com/p/platform.js" defer> </script>
+					<div class="elfsight-app-cf719115-7e91-43ac-990a-eb2e6dd62418"></div>
+				</div>
+			</main>
+		{% endblock %}

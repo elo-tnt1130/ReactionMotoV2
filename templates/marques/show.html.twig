@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Marques - {{ marque.libMarque }} 
+{% endblock %}
+
+{% block body %}
+
+	<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4 p-4">
+		<div class="col-12">
+			<h1>Marques -
+				{{ marque.libMarque }}
+			</h1>
+			<a href="{{ path('marques_index') }}" class="btn btn-info">
+				<i class="fa fa-arrow-left"></i>
+				Retour à la liste
+			</a>
+		</div>
+		<div class="container my-3">
+			<table class="table">
+				<tbody>
+					<tr>
+						<th class="cellwidth">Marque</th>
+						<td>{{ marque.libMarque }}</td>
+					</tr>
+					<tr>
+						<th class="cellwidth">Descriptif</th>
+						<td>{{ marque.descrMarque|raw }}</td>
+					</tr>
+					<tr>
+						<th class="cellwidth">Résumé</th>
+						<td>{{ marque.resumeMarque|raw }}</td>
+					</tr>
+					<tr>
+						<th class="cellwidth">Logo :</th>
+						<td>
+							{% if marque.logoMarque != "" %}
+								<img src="/img/{{ marque.logoMarque }}" alt="{{ marque.libMarque }}" class="w-25 img-fluid">
+							{% else %}
+								<img src="/img/default.png" alt="default_image" class="w-25 img-fluid">
+							{% endif %}
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<a href="{{ path('marques_edit', {'id': marque.id})}}" class="btn btn-info mr-3">
+					<i class="fa fa-pen"></i>
+					Modifier</a>
+
+				{{ include('marques/_delete_form.html.twig') }}
+			</div>
+		</div>
+
+	</main>
+{% endblock %}

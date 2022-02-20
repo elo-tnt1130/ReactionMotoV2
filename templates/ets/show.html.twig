@@ -1,0 +1,76 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Entreprise
+{% endblock %}
+
+{% block body %}
+
+	<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4 p-4">
+		<div class="col-12">
+			<h1>Entreprise</h1>
+			<a href="{{ path('ets_index') }}" class="btn btn-info">
+				<i class="fa fa-arrow-left"></i>
+				Retour à la liste
+			</a>
+		</div>
+
+		<div class="container my-3">
+			<table class="table">
+				<tbody>
+					<tr>
+						<th class="cellwidth">Texte en page d'accueil</th>
+						<td>{{ ets.texteAccueil|raw }}</td>
+					</tr>
+
+					<tr>
+						<th class="cellwidth">Téléphone"</th>
+						<td>{{ ets.telEts }}</td>
+					</tr>
+
+					{% if ets.fax !=""%}
+						<tr>
+							<th class="cellwidth">Fax</th>
+							<td>{{ ets.faxEts }}</td>
+						</tr>
+					{% endif %}
+
+					<tr>
+						<th class="cellwidth">E-mail 1</th>
+						<td>{{ ets.mail1Ets }}</td>
+					</tr>
+
+					{% if ets.mail2Ets !=""%}
+						<tr>
+							<th class="cellwidth">E-mail 2</th>
+							<td>{{ ets.mail2ets }}</td>
+						</tr>
+					{% endif %}
+
+					<tr>
+						<th class="cellwidth">Horaires</th>
+						<td>{{ ets.horaires|raw }}</td>
+					</tr>
+
+					<tr>
+						<th class="cellwidth">Adresse</th>
+						<td>{{ ets.adresseEts }}</td>
+					</tr>
+
+					<tr>
+						<th class="cellwidth">Code postal</th>
+						<td>{{ ets.cpEts }}</td>
+					</tr>
+
+					<tr>
+						<th class="cellwidth">Ville</th>
+						<td>{{ ets.villeEts }}</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<a href="{{ path('ets_index') }}">back to list</a>
+
+			<a href="{{ path('ets_edit', {'id': ets.id}) }}">edit</a>
+
+			{{ include('ets/_delete_form.html.twig') }}
+		{% endblock %}

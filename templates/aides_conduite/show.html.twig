@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Aides à la conduite -
+	{{ aides_conduite.libAideConduite }}
+{% endblock %}
+
+{% block body %}
+
+	<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4 p-4">
+		<div class="col-12">
+			<h1>Aides à la conduite -
+				{{ aides_conduite.libAideConduite }}</h1>
+			<a href="{{ path('aides_conduite_index') }}" class="btn btn-info">
+				<i class="fa fa-arrow-left"></i>
+				Retour à la liste
+			</a>
+		</div>
+
+		<div class="container my-3">
+
+			<table class="table">
+				<tbody>
+					<tr>
+						<th class="cellwidth">Aide à la conduite : </th>
+						<td>{{ aides_conduite.libAideConduite }}</td>
+					</tr>
+				</tbody>
+			</table>
+
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<a href="{{ path('aides_conduite_edit', {'id': aides_conduite.id})}}" class="btn btn-info mr-3">
+					<i class="fa fa-pen"></i>
+					Modifier</a>
+
+				{{ include('aides_conduite/_delete_form.html.twig') }}
+			</div>
+		</div>
+	</main>
+{% endblock %}

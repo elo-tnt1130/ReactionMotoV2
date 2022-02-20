@@ -1,0 +1,5 @@
+{{ form_start(form) }}
+    {{form_label (form.lib_service)}} <font style="color:red">*</font>
+    {{form_widget (form.lib_service)}}
+    <button class="btn btn-info mt-3">{{ button_label|default('Enregistrer') }}</button>
+{{ form_end(form) }}

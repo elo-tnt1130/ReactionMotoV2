@@ -1,0 +1,20 @@
+{{ form_start(form) }}
+    {{form_label (form.cylindree)}} <font style="color:red">*</font>
+    {{form_widget (form.cylindree)}}
+
+    {{form_label (form.puissance_ch)}}
+    {{form_widget (form.puissance_ch)}}
+
+    {{form_label (form.RegimeMoteurPuissance)}}
+    {{form_widget (form.RegimeMoteurPuissance)}}
+
+    {{form_label (form.couple_nm)}}
+    {{form_widget (form.couple_nm)}}
+
+    {{form_label (form.RegimeMoteurCouple)}}
+    {{form_widget (form.RegimeMoteurCouple)}}
+
+{{ form_rest(form)}}
+
+<button class="btn btn-info mt-3">{{ button_label|default('Enregistrer') }}</button>
+{{ form_end(form) }}

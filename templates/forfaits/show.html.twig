@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Forfaits - {{ forfait.libForfait }} 
+{% endblock %}
+
+{% block body %}
+
+	<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4 p-4">
+		<div class="col-12">
+			<h1>Forfaits -
+				{{ forfait.libForfait }}
+			</h1>
+			<a href="{{ path('forfaits_index') }}" class="btn btn-info">
+				<i class="fa fa-arrow-left"></i>
+				Retour à la liste
+			</a>
+		</div>
+		<div class="container my-3">
+			<table class="table">
+				<tbody>
+					<tr>
+						<th class="cellwidth">Forfait</th>
+						<td>{{ forfait.libForfait }}</td>
+					</tr>
+					<tr>
+						<th class="cellwidth">Descriptif</th>
+						<td>{{ forfait.descrForfait }}</td>
+					</tr>
+					<tr>
+						<th class="cellwidth">Prix</th>
+						<td>{{ forfait.prixForfait }}</td>
+					</tr>
+					<tr>
+						<th class="cellwidth">Service lié</th>
+						<td>{{ forfait.services }}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<a href="{{ path('forfaits_edit', {'id': forfait.id})}}" class="btn btn-info mr-3">
+					<i class="fa fa-pen"></i>
+					Modifier</a>
+
+				{{ include('forfaits/_delete_form.html.twig') }}
+			</div>
+		</div>
+
+	</main>
+
+
+{% endblock %}

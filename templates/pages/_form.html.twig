@@ -1,0 +1,47 @@
+{{ form_start(form) }}
+<div class="mb-3">
+	{{ form_label(form.lib_page) }} <font style="color:red">*</font>
+	{{ form_widget(form.lib_page) }}
+</div>
+
+<div class="mb-3">
+	{{ form_label(form.services) }} <font style="color:red">*</font>
+	{{ form_widget(form.services) }}
+</div>
+
+<div class="mb-3">
+	{{ form_label(form.bloc1) }} <font style="color:red">*</font>
+	{{ form_widget(form.bloc1) }}
+	{{ form_help(form.bloc1) }}
+</div>
+
+<div class="mb-3">
+	{{ form_label(form.bloc2) }}
+	{{ form_widget(form.bloc2) }}
+	{{ form_help(form.bloc2) }}
+</div>
+
+<div class="mb-3">
+	{{ form_label(form.bloc3) }}
+	{{ form_widget(form.bloc3) }}
+	{{ form_help(form.bloc3) }}
+</div>
+
+<div class="mb-3">
+	{{ form_label(form.bloc4) }}
+	{{ form_widget(form.bloc4) }}
+	{{ form_help(form.bloc4) }}
+</div>
+
+<div class="mb-3">
+	{{ form_label(form.metadescr) }}
+	{{ form_widget(form.metadescr) }}
+</div>
+
+<div class="mb-3">
+	{{ form_label(form.metakw) }}
+	{{ form_widget(form.metakw) }}
+</div>
+
+<button class="btn btn-info mt-3">{{ button_label|default('Enregistrer') }}</button>
+{{ form_end(form) }}

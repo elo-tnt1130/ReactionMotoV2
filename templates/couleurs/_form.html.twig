@@ -1,0 +1,16 @@
+{{ form_start(form) }}
+
+    <div class="mb-3">
+    {{form_label (form.lib_couleur)}} <font style="color:red">*</font>
+    {{form_widget (form.lib_couleur)}}
+    </div>
+
+    <div class="mb-3">
+    {{form_label (form.img_color)}} <font style="color:red">*</font>
+    {{form_widget (form.img_color)}}
+    {{form_help (form.img_color)}}
+    </div>
+
+    {{ form_rest(form) }}
+    <button class="btn btn-info">{{ button_label|default('Enregistrer') }}</button>
+{{ form_end(form) }}

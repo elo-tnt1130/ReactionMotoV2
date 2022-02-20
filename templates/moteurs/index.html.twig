@@ -1,0 +1,63 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Moteurs index
+{% endblock %}
+
+{% block body %}
+
+	<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4 mb-3">
+{{parent()}}
+		<div class="container-fluid m-2">
+			<div class="row d-flex justify-content-between mb-3">
+				<h1 class="my-2">Moteurs</h1>
+				<a href="{{ path('moteurs_new') }}" class="btn btn-info align-self-center mr-4">
+					<i class="fa fa-plus"></i>
+					Ajouter</a>
+			</div>
+
+			<div class="container-fluid m-2">
+			
+			<p class='alert-info p-3'><i class="fa fa-info-circle"></i> Le contenu de cette page se répercute sur les pages modèles de moto.</p>
+
+				<table class="table table-hover table-striped">
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>Cylindrée en cm3</th>
+							<th>Puissance en ch</th>
+							<th>Couple en Nm</th>
+							<th colspan="2">Actions</th>
+						</tr>
+					</thead>
+					<tbody>
+						{% for moteur in moteurs %}
+							<tr>
+								<td>{{ moteur.id }}</td>
+								<td>{{ moteur.cylindree }}</td>
+								<td>{{ moteur.puissanceCh }} ch {% if moteur.RegimeMoteurPuissance != 0 %} à {{ moteur.RegimeMoteurPuissance }} rpm {% endif %}</td>
+								<td>{{ moteur.coupleNm }} Nm {% if moteur.RegimeMoteurCouple != 0 %} à {{ moteur.RegimeMoteurCouple }} rpm {% endif %}</td>
+								<td>
+									<a href="{{ path('moteurs_edit', {'id': moteur.id}) }}" class="btn btn-info">
+										<i class="fa fa-pen"></i>
+										Modifier</a>
+									<a href="{{ path('moteurs_delete', {'id': moteur.id}) }}" class="btn btn-danger">
+										<i class="fa fa-trash-alt"></i>
+										Supprimer</a>
+                                </td>
+                            
+							</tr>
+						{% else %}
+							<tr>
+								<td colspan="5">no records found</td>
+							</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+
+	</main>
+
+
+{% endblock %}

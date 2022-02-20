@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Forfaits
+{% endblock %}
+
+{% block body %}
+
+	<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4 mb-3">
+{{parent()}}
+		<div class="container-fluid m-2">
+			<div class="row d-flex justify-content-between mb-3">
+				<h1 class="my-2">Forfaits</h1>
+				<a href="{{ path('forfaits_new') }}" class="btn btn-info align-self-center mr-4">
+					<i class="fa fa-plus"></i>
+					Ajouter</a>
+			</div>
+
+			<div class="container-fluid m-2">
+
+			<p class='alert-info p-3'><i class="fa fa-info-circle"></i> Le contenu de cette page se répercute sur les pages de services (restauration, passage au banc, entretien, préparation et personnalisation).</p>
+
+			<table class="table table-hover table-striped">
+				<thead>
+					<tr>
+						<th>#</th>
+						<th>Forfait</th>
+						<th>Prix</th>
+						<th>Service lié</th>
+						<th colspan="2">Actions</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for forfait in forfaits %}
+						<tr>
+							<td>{{ forfait.id }}</td>
+							<td>{{ forfait.libForfait }}</td>
+							<td>{{ forfait.prixForfait }}</td>
+							<td>{{ forfait.services }}</td>
+							<td>
+								<a href="{{ path('forfaits_edit', {'id': forfait.id}) }}" class="btn btn-info">
+									<i class="fa fa-pen"></i>
+									Modifier</a>
+								<a href="{{ path('forfaits_delete', {'id': forfait.id}) }}" class="btn btn-danger">
+									<i class="fa fa-trash-alt"></i>
+									Supprimer</a>
+							</td>
+
+						</tr>
+					{% else %}
+						<tr>
+							<td colspan="6">no records found</td>
+						</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+
+</main>
+{% endblock %}

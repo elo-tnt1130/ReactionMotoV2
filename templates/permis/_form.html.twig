@@ -1,0 +1,11 @@
+{{ form_start(form) }}
+    {{form_label (form.lib_permis)}} <font style="color:red">*</font>
+    {{form_widget (form.lib_permis)}}
+
+    {{form_label (form.symbole_permis)}}
+    {{form_widget (form.symbole_permis)}}
+    {{form_help (form.symbole_permis)}}
+
+    {{ form_rest(form) }} 
+    <button class="btn btn-info mt-3">{{ button_label|default('Enregistrer') }}</button>
+{{ form_end(form) }}

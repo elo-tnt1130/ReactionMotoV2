@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Permis
+{% endblock %}
+
+{% block body %}
+	<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4 p-4">
+		<div class="col-12">
+			<h1>Permis -
+				{{ permis.libPermis }}
+			</h1>
+			<a href="{{ path('permis_index') }}" class="btn btn-info">
+				<i class="fa fa-arrow-left"></i>
+				Retour à la liste
+			</a>
+		</div>
+		<div class="container my-3">
+			<table class="table">
+				<tbody>
+					<tr>
+						<th class="cellwidth">Type du permis</th>
+						<td>{{ permis.libPermis }}</td>
+					</tr>
+					<tr>
+						<th>Symbole</th>
+						{% if permis.symbolePermis != "" %}
+							<img src="/img/{{ permis.symbolePermis }}" alt="{{ permis.libPermis }}" class="w-25 img-fluid">
+						{% else %}
+							<img src="/img/default.png" alt="default_image" class="w-25 img-fluid">
+						{% endif %}
+					</tr>
+				</tbody>
+			</table>
+        </div>
+		<div class="container">
+			<div class="row">
+				<a href="{{ path('permis_edit', {'id': permis.id})}}" class="btn btn-info mr-3">
+					<i class="fa fa-pen"></i>
+					Modifier</a>
+
+				{{ include('permis/_delete_form.html.twig') }}
+			</div>
+		</div>
+
+	</main>
+		{% endblock %}

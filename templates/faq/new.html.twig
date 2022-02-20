@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}FAQ - Nouvelle question {% endblock %}
+
+{% block body %}
+
+    	<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4 p-4">
+		<div class="col-12 mb-3">
+			<h1>Ajouter une question</h1>
+			<a href="{{ path('faq_index') }}" class="btn btn-info">
+				<i class="fa fa-arrow-left"></i>
+				Retour à la liste</a>
+		</div>
+
+		<div class="container mt-2">
+			{{ include('faq/_form.html.twig') }}
+		</div>
+
+
+	</main>
+{% endblock %}

@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Couleurs
+{% endblock %}
+
+{% block body %}
+	<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4 mb-3">
+{{parent()}}
+		<div class="container-fluid m-2">
+			<div class="row d-flex justify-content-between mb-3">
+				<h1 class="my-2">Couleurs</h1>
+				<a href="{{ path('couleurs_new') }}" class="btn btn-info align-self-center mr-4">
+					<i class="fa fa-plus"></i>
+					Ajouter</a>
+			</div>
+
+			<div class="container-fluid m-2">
+
+			<p class='alert-info p-3'><i class="fa fa-info-circle"></i> Le contenu de cette page se répercute sur les pages modèles de moto.</p>
+			
+				<table class="table table-hover table-striped">
+						<thead>
+							<tr>
+								<th>#</th>
+								<th>Couleur</th>
+								<th>Représentation</th>
+								<th colspan="2">Actions</th>
+							</tr>
+						</thead>
+						<tbody>
+							{% for couleur in couleurs %}
+								<tr>
+									<td class='align-middle'>{{ couleur.id }}</td>
+									<td class='align-middle' class="cellwidthimg">{{ couleur.libCouleur }}</td>
+									<td style="word-wrap: break-word;min-width: 160px;max-width: 160px;">
+										{% if couleur.imgColor != "" %}
+											<img src="/img/{{ couleur.imgColor }}" alt="{{ couleur.libCouleur }}" class="img-prez img-fluid mx-auto">
+										{% else %}
+											<img src="/img/default.png" alt="default_image" class="img-prez img-fluid mx-auto">
+										{% endif %}
+									</td>
+									<td class='align-middle flex-nowrap align-self-auto'>
+										<a href="{{ path('couleurs_edit', {'id': couleur.id}) }}" class="btn btn-info">
+											<i class="fa fa-pen"></i>
+											Modifier</a>
+										<a href="{{ path('couleurs_delete', {'id': couleur.id}) }}" class="btn btn-danger">
+											<i class="fa fa-trash-alt"></i>
+											Supprimer</a>
+									</td>
+								
+								</tr>
+							{% else %}
+								<tr>
+									<td colspan="4">no records found</td>
+								</tr>
+							{% endfor %}
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+
+		</main>
+	{% endblock %}

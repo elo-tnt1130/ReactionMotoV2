@@ -1,0 +1,17 @@
+{{ form_start(form) }}
+
+{{form_label (form.question)}}
+<font style="color:red">*</font>
+{{form_widget (form.question)}}
+
+{{form_label (form.reponse)}}
+<font style="color:red">*</font>
+{{form_widget (form.reponse)}}
+{{form_help (form.reponse)}}
+
+{{form_label (form.theme_FAQ)}}
+{{form_widget (form.theme_FAQ)}}
+
+{{ form_widget(form) }}
+<button class="btn btn-info">{{ button_label|default('Enregistrer') }}</button>
+{{ form_end(form) }}

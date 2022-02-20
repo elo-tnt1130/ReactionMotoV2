@@ -1,0 +1,27 @@
+{% extends 'base_front.html.twig' %}
+
+{% block body %}Erreur 403{% endblock %}
+
+{% block body %}
+	<main role="main" class="col-md-6 ml-sm-auto col-lg-6 px-md-4 mt-5 mx-auto position">
+		<div class="chartjs-size-monitor error px-3">
+			<h1 class="error pb-3">Erreur 403 - Accès refusé</h1>
+			<h3 class="error pb-1">Hep hep hep toi là bas !
+			</h3>
+			<p class="error">T'es perdu ?</p>
+			<p class="error">Si tu es sûr d'avoir les autorisations pour accéder à cette page, nous t'invitons à essayer les opérations suivantes :
+				<ul>
+					<li>Désactiver ton addblocker</li>
+					<li>Vider le cache de navigation</li>
+					<li>Rafraîchir la page</li>
+					<li>Désactiver le pare-feu pour cette page</li>
+				</ul>
+			</p>
+			<div class="error text-center">
+				<i class="fa fa-angellist"></i>
+				<i class="fa fa-motorcycle"></i>
+			</div>
+		</div>
+	</main>
+
+{% endblock %}

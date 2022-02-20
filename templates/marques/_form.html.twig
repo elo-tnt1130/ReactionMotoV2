@@ -1,0 +1,20 @@
+{{ form_start(form) }}
+{{form_label (form.lib_marque)}}
+<font style="color:red">*</font>
+{{form_widget (form.lib_marque)}}
+
+{{form_label (form.descr_marque)}}
+{{form_widget (form.descr_marque)}}
+{{form_help (form.descr_marque)}}
+
+{{form_label (form.resume_marque)}}
+{{form_widget (form.resume_marque)}}
+{{form_help (form.resume_marque)}}
+
+{{form_label (form.logo_marque)}}
+{{form_widget (form.logo_marque)}}
+{{form_help (form.logo_marque)}}
+
+{{ form_rest(form) }}
+<button class="btn btn-info mt-3">{{ button_label|default('Enregistrer') }}</button>
+{{ form_end(form) }}

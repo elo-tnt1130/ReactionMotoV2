@@ -1,0 +1,51 @@
+{% extends 'base_front.html.twig' %}
+
+{% block meta %}
+  		<meta name="description" content="{{page.metadescr}}">
+	  	<meta name="keywords" content="{{page.metakw}}">  
+{% endblock %}
+
+
+{% block title %}
+	{{page.libPage}}
+{% endblock %}
+
+{% block body %}
+	<main class="py-5 position">
+
+		<!-- Présentation de la marque -->
+		<section class="brand_presentation justify-content-center text-center">
+			<img src="/img/{{marque.logoMarque}}" alt="logo-{{marque.libMarque}}" class="img-brand">
+			<div class="container w-75 text-center p-1 mt-2">
+				<p class="text-brand">{{marque.descrMarque|raw}}</p>
+			</div>
+		</section>
+
+		<hr
+		class="separator">
+
+		<!-- Présentation des modèles -->
+		<section class="row d-flex models mb-5 justify-content-center pb-5">
+
+			{% for modele in modeles %}
+				<div class="card m-3" style="width: 18rem;">
+					<a href="{{path('show_moto', {'id': modele.id})}}">
+						{% if modele.img1Moto != "" %}
+							<img src="/img/{{modele.img1Moto}}" class="card-img-top" alt="modele-{{modele.libModele}}">
+						{% else %}
+							<img src="/img/default.png" class="w-50" alt="{{modele.libModele}}">
+						{% endif %}
+						<div class="card-body text-center">
+							<h4 class="text-center text-dark">{{modele.libModele|upper}}</h4>
+							<p class="card-text text-danger text-center">{{modele.prixMoto}} €</p>
+						</div>
+					</a>
+				</div>
+			{% endfor %}
+
+
+
+		</section>
+
+	</main>
+{% endblock %}

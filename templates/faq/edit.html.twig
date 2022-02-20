@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modifier la question{% endblock %}
+
+{% block body %}
+
+	<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4 mb-3">
+		<div class="col-12">
+			<h1>Modifier la question -
+				{{ faq.question }}</h1>
+			<a href="{{ path('faq_index') }}" class="btn btn-info">
+				<i class="fa fa-arrow-left"></i>
+				Retour à la liste
+			</a>
+		</div>
+
+		<div class="container mt-3">
+
+{{ form_start(form)}}
+
+			<div class="mb-3">
+				{{form_label (form.question)}}
+				<font style="color:red">*</font>
+				{{form_widget (form.question)}}
+			</div>
+
+			<div class="mb-3">
+				{{form_label (form.reponse)}}
+				<font style="color:red">*</font>
+				{{form_widget (form.reponse)}}
+				{{form_help (form.reponse)}}
+			</div>
+
+			<div class="mb-3">
+				{{form_label (form.theme_FAQ)}}
+				{{form_widget (form.theme_FAQ)}}
+			</div>
+
+			{{ form_rest(form)}}
+			<div class="row mt-3">
+				<button type="submit" class="btn btn-info mr-2">
+					<i class="fa fa-pen"></i>
+					Modifier</button>
+				<a href="{{path('faq_delete', {'id':faq.id})}}" class="btn btn-danger mr-2">
+					<i class="fa fa-trash"></i>
+					Supprimer</a>
+			</div>
+			{{ form_end(form)}}
+
+		</div>
+
+	</main>
+{% endblock %}

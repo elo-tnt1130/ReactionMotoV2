@@ -1,0 +1,13 @@
+{{ form_start(form) }}
+{{form_label (form.lib_img)}}
+{{form_widget (form.lib_img)}}
+{{form_help (form.lib_img)}}
+
+{{form_label (form.descr_img)}}
+{{form_widget (form.descr_img)}}
+
+{{form_label (form.services)}}
+{{form_widget (form.services)}}
+
+<button class="btn btn-info mt-3">{{ button_label|default('Enregistrer') }}</button>
+{{ form_end(form) }}

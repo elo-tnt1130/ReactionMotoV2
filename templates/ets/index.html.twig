@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Entreprise
+{% endblock %}
+
+{% block body %}
+
+	<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4 mb-3">
+{{parent()}}
+		<div class="container-fluid m-2">
+			<div class="row d-flex justify-content-between mb-3">
+				<h1 class="my-2">Informations sur l'entreprise</h1>
+				{# <a href="{{ path('ets_new') }}" class="btn btn-info align-self-center mr-4">
+					<i class="fa fa-plus"></i>
+					Ajouter</a> #}
+			</div>
+
+			<div class="container-fluid m-2">
+
+			<p class='alert-info p-3'><i class="fa fa-info-circle"></i> Le contenu de cette page se répercute sur les pages d'accueil et de contact.</p>
+
+				<table class="table  table-hover table-striped">
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>Présentation</th>
+							<th>Tel/Fax</th>
+							<th>Mail(s)</th>
+							<th>Horaires</th>
+							<th>Adresse</th>
+							<th colspan="2">Actions</th>
+						</tr>
+					</thead>
+					<tbody>
+						{% for et in ets %}
+							<tr>
+								<td>{{ et.id }}</td>
+								<td style="word-wrap: break-word;min-width: 160px;max-width: 320px;"	>{{ et.texteAccueil|raw }}</td>
+								<td style="word-wrap: break-word;min-width: 160px;max-width: 140px;">{{ et.telEts }} / {{ et.faxEts }}</td>
+								<td style="word-wrap: break-word;min-width: 160px;max-width: 180px;">{{ et.mail1Ets }} / {{ et.mail2Ets }}</td>
+								<td style="word-wrap: break-word;min-width: 160px;max-width: 320px;">{{ et.horaires|raw }}</td>
+								<td style="word-wrap: break-word;min-width: 160px;max-width: 320px;">{{ et.adresseEts }} <br> {{ et.cpEts }} - {{ et.villeEts }}</td>
+								<td>
+									<a href="{{ path('ets_edit', {'id': et.id}) }}" class="btn btn-info">
+										<i class="fa fa-pen"></i>
+										Modifier</a>
+								</td>
+								{# <td>
+									<a href="{{ path('ets_delete', {'id': et.id}) }}" class="btn btn-danger">
+										<i class="fa fa-trash-alt"></i>
+										Supprimer</a>
+								</td> #}
+							</tr>
+						{% else %}
+							<tr>
+								<td colspan="11">no records found</td>
+							</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</main>
+{% endblock %}

@@ -1,0 +1,140 @@
+{% extends 'base_front.html.twig' %}
+
+{% block meta %}
+	<meta name="description" content="{{page.metadescr}}">
+	<meta name="keywords" content="{{page.metakw}}">
+{% endblock %}
+
+{% block title %}
+	{{page.libPage}}
+	Dynojet
+{% endblock %}
+
+{% block body %}
+	{# <section class="carousel-restore position">
+			<div id="carouselDynojet" class="carousel slide carousel-restore carousel-fade" data-ride="carousel">
+				<div class="carousel-inner carousel-restore">
+					{% for image in carrousel %}
+						{% if loop.index0 == 0 %}
+							<div class="carousel-item active">
+							{% else %}
+								<div class="carousel-item">
+								{% endif %}
+	
+								{% if image %}
+									<img src="/img/{{image.libImg}}" class="d-block img-carousel-restore mx-auto" alt="/img/{{image.descrImg}}">
+								{% else %}
+									<img src="/img/default.png" class="d-block img-carousel-restore mx-auto" alt="/img/default.png">
+								{% endif %}
+							</div>
+						{% endfor %}
+	
+						<a class="carousel-control-prev" href="#carouselDynojet" role="button" data-slide="prev">
+							<i class="fa fa-chevron-left"></i>
+							<span class="sr-only">Précédent</span>
+						</a>
+						<a class="carousel-control-next" href="#carouselDynojet" role="button" data-slide="next">
+							<i class="fa fa-chevron-right"></i>
+							<span class="sr-only">Suivant</span>
+						</a>
+	
+					</div>
+				</div>
+			</section> #}
+
+	<div class="container mt-3 mb-3 position">
+		<div class="alert alert-danger text-center">
+			<p>On sait que vous êtes pressés. Encore un peu de patience, il arrive !</p>
+		</div>
+	</div>
+
+	<main
+		class="container py-5 position">
+
+
+		<!-- Corps -->
+
+
+		<section class="d-flex row justify-content-center mb-5 ">
+
+
+			<div class="col-12 text-center mb-3">
+				<h3>
+					<font color="#cc0000">
+						{{page.libPage}}
+					</font>
+				</h3>
+			</div>
+
+			<div
+				class="col-lg-8 col-md-12 justify-content-center row d-flex">
+				<!-- Bloc 1 texte + image 2 colonnes 8-4 -->
+				<article class="row d-flex justify-content-center col-12 pt-5 pb-3 mx-auto">
+					<div class="col-lg-8 col-md-12 mb-2  justify-content-center align-self-center">
+						<p>{{page.bloc1|raw}}</p>
+					</div>
+
+					<div class="col-lg-4 col-md-12 align-self-center">
+						{% for image1 in images %}
+							{% if loop.first %}
+								{% if image1 %}
+									<img src="/img/{{image1.libImg}}" class="w-100 d-block mx-auto" alt="/img/{{image1.descrImg}}">
+								{% else %}
+									<img src="/img/default.png" class="w-50 d-block mx-auto" alt="/img/default.png">
+								{% endif %}
+							{% endif %}
+						{% endfor %}
+					</div>
+				</article>
+
+				<!-- Bloc 2 texte + image 2 colonnes 4-8  -->
+				<article class="row d-flex justify-content-center col-12 py-3">
+					<div class="col-lg-4 col-md-12 mb-2  align-self-center">
+						{% for image2 in images %}
+							{% if loop.last %}
+								{% if image2 %}
+									<img src="/img/{{image2.libImg}}" class="w-100 d-block mx-auto" alt="/img/{{image2.descrImg}}">
+								{% else %}
+									<img src="/img/default.png" class="w-50 d-block mx-auto" alt="/img/default.png">
+								{% endif %}
+							{% endif %}
+						{% endfor %}
+					</div>
+					<div class="col-lg-8 col-md-12 align-self-center justify-content-center">
+						<p>{{page.bloc2|raw}}</p>
+					</div>
+				</article>
+
+			</div>
+
+			{# <hr class="separator pb-3"> #}
+
+			<div class="row d-flex col-lg-4 col-md-12 justify-content-center ml-2 vr align-self-center">
+				<h4>
+					<font color="#cc0000">Forfaits</font>
+				</h4>
+				<article class="row d-flex justify-content-center align-self-center col-12 py-5">
+
+					{% for forfait in forfaits %}
+
+						<div class="col-8">{{forfait.libForfait}}</div>
+						<div class="col-4 text-right">
+							<font color="#cc0000">
+								{{forfait.prixForfait}}
+								€
+							</font>
+						</div>
+
+					{% endfor %}
+				</article>
+			</div>
+			{# 
+							<div class="phone-services-slide">
+								<i class='fa fa-phone'></i>
+							</div> #}
+
+		</section>
+
+	</main>
+
+{% endblock %}

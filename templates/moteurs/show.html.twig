@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Moteur -
+	{{ moteur.cylindree }}
+{% endblock %}
+
+{% block body %}
+
+	<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4 p-4">
+		<div class="col-12">
+			<h1>Moteur -
+				{{ moteur.cylindree }}
+				cc</h1>
+			<a href="{{ path('moteurs_index') }}" class="btn btn-info">
+				<i class="fa fa-arrow-left"></i>
+				Retour à la liste
+			</a>
+		</div>
+
+		<div class="container my-3">
+			<table class="table">
+				<tbody>
+					<tr>
+						<th class="cellwidth">Cylindrée en cm3</th>
+						<td>{{ moteur.cylindree }}</td>
+					</tr>
+					<tr>
+						<th class="cellwidth">Puissance en ch din/tr.min</th>
+						<td>
+                            {{ moteur.puissanceCh }} ch {% if moteur.RegimeMoteurPuissance != 0 %} à {{ moteur.RegimeMoteurPuissance }} rpm {% endif %}
+                        </td>
+					</tr>
+					<tr>
+						<th class="cellwidth">Couple en Nm/tr.min</th>
+						<td>{{ moteur.coupleNm }} ch {% if moteur.RegimeMoteurCouple != 0 %} à {{ moteur.RegimeMoteurCouple }} rpm {% endif %}
+						</td>
+
+					</tr>
+				</tbody>
+			</table>
+
+			<div class="container">
+				<div class="row">
+					<a href="{{ path('moteurs_edit', {'id': moteur.id})}}" class="btn btn-info mr-3">
+						<i class="fa fa-pen"></i>
+						Modifier</a>
+
+					{{ include('moteurs/_delete_form.html.twig') }}
+				</div>
+			</div>
+		{% endblock %}

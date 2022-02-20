@@ -1,0 +1,587 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
+/* -------------------------------------------------------------------------- */
+/*                                    FONTS                                   */
+/* -------------------------------------------------------------------------- */
+
+@font-face {
+  font-family: "roboto";
+  src: url("/css/fonts/Roboto-Regular.ttf"), url("/css/fonts/Roboto-Regular.woff"),
+    url("/css/fonts/Roboto-Regular.woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "roboto-light";
+  src: url("/css/fonts/Roboto-Light.ttf"),
+    url("/css/fonts/Roboto-Light.woff") format("woff"),
+    url("/css/fonts/Roboto-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "roboto-bold";
+  src: url("/css/fonts/Roboto-Bold.ttf"),
+    url("/css/fonts/Roboto-Bold.woff") format("woff"),
+    url("/css/fonts/Roboto-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "roboto-italic";
+  src: url("/css/fonts/Roboto-Italic.ttf"),
+    url("/css/fonts/Roboto-Italic.woff") format("woff"),
+    url("/css/fonts/Roboto-Italic.woff2") format("woff2");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "roboto-light-italic";
+  src: url("/css/fonts/Roboto-LightItalic.ttf"),
+    url("/css/fonts/Roboto-LightItalic.woff") format("woff"),
+    url("/css/fonts/Roboto-LightItalic.woff2") format("woff2");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "roboto-bold-italic";
+  src: url("/css/fonts/Roboto-BoldItalic.ttf"),
+    url("/css/fonts/Roboto-BoldItalic.woff") format("woff"),
+    url("/css/fonts/Roboto-BoldItalic.woff2") format("woff2");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "brandontext-bold";
+  src: url("/css/fonts/BrandonText-Bold.otf"),
+    url("/css/fonts/BrandonText-Bold.woff") format("woff"),
+    url("/css/fonts/BrandonText-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "brandontext-light";
+  src: url("/css/fonts/BrandonText-Light.otf"),
+    url("/css/fonts/BrandonText-Light.woff") format("woff"),
+    url("/css/fonts/BrandonText-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "brandontext";
+  src: url("/css/fonts/BrandonText-Regular.otf"),
+    url("/css/fonts/BrandonText-Regular.woff") format("woff"),
+    url("/css/fonts/BrandonText-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    BODY                                    */
+/* -------------------------------------------------------------------------- */
+
+body {
+  background-color: #eeeeee !important;
+  width: 100%;
+  /* overflow-x: hidden; */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "brandontext", Tahoma, "DejaVu Sans", sans-serif;
+}
+
+p {
+  font-family: "roboto", "DejaVu Sans", "Segoe UI", Verdana, sans-serif;
+  font-size: 1rem;
+}
+
+.btn-danger {
+  background-color: #cc0000 !important;
+}
+
+.btn-info {
+  background-color: #4a4bdb !important;
+}
+
+.text-danger {
+  color: #cc0000;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   NAVBAR                                   */
+/* -------------------------------------------------------------------------- */
+
+.img-logo {
+  height: 50px;
+  width: auto;
+}
+
+.dropdown-item,
+a.nav-link {
+  color: whitesmoke !important;
+  font-family: "brandontext", Tahoma, "DejaVu Sans", sans-serif;
+}
+
+a.nav-link:hover, a.dropdown-toggle:focus {
+  background-color: #cc0000 !important;
+}
+
+a.nav-link:focus, a.dropdown-item:hover,
+li.active {
+  background-color: #4a4bdb;
+}
+
+.dropdown:focus {
+  background-color: #cc0000 !important;
+}
+
+.dropdown-menu {
+  border-radius: 0 !important;
+}
+
+.bkg-search {
+  background-color: #333333 !important;
+}
+
+.breadcrumb {
+  font-size: 0.8rem;
+}
+
+.caillou {
+  display: none;
+}
+
+.chemin {
+  color: gray;
+}
+
+.chemin:hover {
+  color: #cc0000;
+  opacity: 0.75;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   FOOTER                                   */
+/* -------------------------------------------------------------------------- */
+
+footer > nav > ul > li > a.nav-link {
+  color: #cc0000 !important;
+  font-size: 0.8rem;
+}
+
+a.footer-link {
+  color: #cc0000 !important;
+  font-size: 0.8rem;
+}
+
+a.footer-link:hover, a.focused:focus {
+  background-color: #4a4bdb !important;
+}
+
+nav>iframe {
+  text-align: center !important;
+}
+
+#footerLinks {
+  display: none ;
+}
+/* -------------------------------------------------------------------------- */
+/*                                    VENTE                                   */
+/* -------------------------------------------------------------------------- */
+
+.card-btn {
+  border-radius: 0 !important;
+}
+
+.card {
+  background-color: #dddddd !important;
+  border-radius: 0 !important;
+}
+
+.card-body {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  /* background-color: #dddddd !important; */
+}
+
+.card-img-top,
+h3.card-title {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  border-radius: 0 !important;
+}
+
+.card-div-btn {
+  position: absolute;
+  bottom: 1rem;
+  right: 15%;
+  left: 15%;
+}
+
+.img-catalogue
+{
+  width : 25% !important;
+}
+
+.img-brand {
+  width: 15%;
+}
+
+.text-brand {
+  font-size: smaller;
+  font-family: "roboto-italic", "DejaVu Sans", "Segoe UI", Verdana, sans-serif;
+}
+
+.separator {
+  color: #cc0000;
+  width: 60%;
+}
+
+.occaz,
+.occaz:hover {
+  text-decoration: none;
+  color: black;
+}
+
+.chevron {
+  color: #cc0000;
+}
+
+.phone {
+  font-size: 1.5rem;
+  color: #cc0000;
+  position: absolute;
+  right: 2rem;
+}
+
+#dl{
+  display: none;
+}
+
+.imgFO {
+  max-width: 2rem;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   CONTACT                                  */
+/* -------------------------------------------------------------------------- */
+#hr-contact {
+  color: #cc0000;
+}
+
+.clickable{
+  color: #cc0000;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   SERVICES                                  */
+/* -------------------------------------------------------------------------- */
+
+.phone-services {
+  font-size: 1.5rem;
+  color: #cc0000;
+  position: absolute;
+  right: 2rem;
+  top: 5.5rem;
+}
+
+.phone-services-slide {
+  font-size: 1.5rem;
+  color: #cc0000;
+  position: absolute;
+  right: 2rem;
+  top: 22.5rem;
+}
+
+.carousel-restore {
+  background-color: #dddddd;
+}
+
+.img-carousel-restore {
+  max-height: 15rem;
+}
+
+.subtitleH5 {
+  font-weight: bold;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    HOME                                    */
+/* -------------------------------------------------------------------------- */
+.welcome-text {
+  font-size: 1.2rem;
+  background-color: rgba(204, 0, 0, 0.3);
+  max-width:100%;
+}
+
+.resumes {
+  background-color: #dddddd;
+}
+
+.welcome-cards {
+  border: none !important;
+}
+
+.special-welcome-cards {
+  background-color: #eeeeee !important;
+}
+
+.container-home {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+/* #c2bfbf */
+
+.img-actu-home {
+  display: none;
+}
+
+.img-service-home {
+  width: 35% !important;
+}
+
+.img-vente-home {
+  width: 35% !important;
+}
+
+/* .carousel-home{
+  max-height: 15rem;
+} */
+
+.img-carousel-home {
+  max-width: 80%;
+  max-height: 13rem;
+}
+
+.carousel-indicators li {
+  background-color: #cc0000 !important;
+}
+
+.carousel-control-next, .carousel-control-prev {
+  color: #cc0000 !important;
+  font-size: 2rem;
+}
+
+.position{
+  position: relative;
+  top: 4.8rem;
+}
+
+.subtitle{
+font-size: 1.4rem;
+}
+
+.subtitle2{ 
+  font-size: 1.1rem;
+}
+
+.float-right{
+  margin-right : 1rem!important;
+}
+
+/* #textWelcome, #carrouselHome{
+  display: none;
+} */
+/* -------------------------------------------------------------------------- */
+/*                                     FAQ                                    */
+/* -------------------------------------------------------------------------- */
+
+.faq
+{ 
+  color: #333333 !important;
+  font-weight: bold !important;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                MEDIA QUERIES                               */
+/* -------------------------------------------------------------------------- */
+/* Extra small devices (portrait phones, less than 576px) */
+@media (min-width: 576px) {
+  .vr {
+    border-left: none;
+  }
+
+  /* #carrouselHome, #textHome {
+    display: none;
+  } */
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .vr {
+    border-left: none;
+  }
+
+  .img-catalogue {
+    width: 25% !important;
+  }
+
+  /* #carrouselHome, #textHome {
+    display: none;
+  } */
+  
+}
+
+/* Medium devices (tablets, 767.99px and up) */
+@media (min-width: 768px) {
+  .phone-services,
+  .phone-services-slide,
+  .phone, #dl-xs {
+    display: none;
+  }
+
+  #dl {
+    display: block;
+    font-size: 1rem;
+  }
+
+  .vr {
+    border-left: none;
+    height: 90%;
+  }
+
+  .img-actu-home {
+    display: block !important;
+  }
+
+  .img-service-home {
+    width: 50% !important;
+  }
+
+  .img-catalogue {
+    width: 30% !important;
+  }
+
+  .img-vente-home {
+    width: 55% !important;
+  }
+
+  /* #textHome, #carrouselHome{
+    display:flex;
+  } */
+
+  #footerLinks {
+    display: flex ;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .phone-services,
+  .phone-services-slide,
+  .phone,
+  #hr-contact,
+  .separator-entretien,
+  .separator-prep, #dl-xs {
+    display: none;
+  }
+
+  .caillou {
+    display: inline-block;
+  }
+
+  #dl {
+    display: block;
+    font-size: 1rem;
+  }
+
+  .vr {
+    border-left: 1px solid #cc0000;
+  }
+
+  .img-catalogue {
+    width: 35%;
+  }
+
+  .img-vente-home {
+    width: 45% !important;
+  }
+
+  .img-actu-home {
+    display: block !important;
+  }
+
+  .img-service-home {
+    width: 60% !important;
+  }
+
+  /* #textWelcome, #carrouselHome{
+    display:flex;
+  } */
+
+  #footerLinks {
+    display: flex ;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .phone-services,
+  .phone-services-slide,
+  .phone,
+  #hr-contact,
+  .separator-entretien,
+  .separator-prep, #dl-xs {
+    display: none;
+  }
+
+  .caillou {
+    display: inline-block;
+  }
+
+  #dl {
+    display: block;
+    font-size: 1rem;
+  }
+
+  .vr {
+    border-left: 1px solid #cc0000;
+  }
+
+  .img-catalogue
+  {
+    width : 40%;
+  }
+
+  .img-vente-home {
+    width: 50% !important;
+  }
+
+  .img-actu-home {
+    display: block !important;
+  }
+
+  .img-service-home {
+    width: 70% !important;
+  }
+
+  /* #textWelcome, #carrouselHome{
+    display:flex;
+  } */
+
+  #footerLinks {
+    display: flex ;
+  }
+
+}
+

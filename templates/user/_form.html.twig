@@ -1,0 +1,41 @@
+{{ form_start(form) }}
+
+<div class="mb-3">
+{{form_label (form.pseudo)}}
+<font style="color:red">*</font>
+{{form_widget (form.pseudo)}}
+</div>
+
+<div class="mb-3">
+{{form_label (form.roles)}}
+{{form_widget (form.roles)}}
+</div>
+
+<div class="mb-3">
+{{form_label (form.password)}}
+<font style="color:red">*</font>
+{{form_widget (form.password)}}
+</div>
+
+<div class="mb-3">
+{{form_label (form.prenom_user)}}
+<font style="color:red">*</font>
+{{form_widget (form.prenom_user)}}
+</div>
+
+<div class="mb-3">
+{{form_label (form.nom_user)}}
+<font style="color:red">*</font>
+{{form_widget (form.nom_user)}}
+</div>
+
+<div class="mb-3">
+{{form_label (form.avatar_user)}}
+{{form_widget (form.avatar_user)}}
+{{form_help (form.avatar_user)}}
+</div>
+
+
+{{ form_rest(form) }}
+<button class="btn btn-info">{{ button_label|default('Enregistrer') }}</button>
+{{ form_end(form) }}

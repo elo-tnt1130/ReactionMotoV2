@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Pages
+{% endblock %}
+
+{% block body %}
+	<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4 mb-3">
+{{parent()}}
+
+		<div class="container-fluid m-2">
+			<div class="row d-flex justify-content-between mb-3">
+				<h1 class="my-2">Pages</h1>
+				<a href="{{ path('pages_new') }}" class="btn btn-info align-self-center mr-4">
+					<i class="fa fa-plus"></i>
+					Ajouter</a>
+			</div>
+
+			<div class="container-fluid m-2">
+
+				<p class='alert-info p-3'>
+					<i class="fa fa-info-circle"></i>
+					Le contenu de cette page se répercute sur les pages modèles de moto.</p>
+
+				<table class="table table-hover table-striped">
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>Titre de la page</th>
+							<th>Bloc de texte 1</th>
+							<th>Bloc de texte 2</th>
+							<th>Bloc de texte 3</th>
+							<th>Bloc de texte 4</th>
+							<th>Description</th>
+							<th>Mots clefs</th>
+							<th colspan="2">Actions</th>
+						</tr>
+					</thead>
+					<tbody>
+						{% for page in pages %}
+							<tr>
+								<td>{{ page.id }}</td>
+								<td>{{ page.libPage }}</td>
+								<td style="word-wrap: break-word;min-width: 160px;max-width: 280px;">{{ page.bloc1|raw }}</td>
+								<td style="word-wrap: break-word;min-width: 160px;max-width: 280px;">{{ page.bloc2|raw }}</td>
+								<td style="word-wrap: break-word;min-width: 160px;max-width: 280px;">{{ page.bloc3|raw }}</td>
+								<td style="word-wrap: break-word;min-width: 160px;max-width: 280px;">{{ page.bloc4|raw }}</td>
+								<td style="word-wrap: break-word;min-width: 160px;max-width: 280px;">{{ page.metadescr }}</td>
+								<td style="word-wrap: break-word;min-width: 160px;max-width: 280px;">{{ page.metakw }}</td>
+								<td class='align-middle flex-nowrap align-self-auto'>
+									<a href="{{ path('pages_edit', {'id': page.id}) }}" class="btn btn-info">
+										<i class="fa fa-pen"></i>
+										Modifier</a>
+									<a href="{{ path('pages_delete', {'id': page.id}) }}" class="btn btn-danger">
+										<i class="fa fa-trash-alt"></i>
+										Supprimer</a>
+								</td>
+							</tr>
+						{% else %}
+							<tr>
+								<td colspan="7">no records found</td>
+							</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</main>
+{% endblock %}

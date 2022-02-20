@@ -1,0 +1,99 @@
+{% extends 'base_front.html.twig' %}
+
+
+{% block meta %}
+	<meta name="description" content="{{page.metadescr}}">
+	<meta name="keywords" content="{{page.metakw}}">
+{% endblock %}
+
+{% block title %}
+	{{ page.libPage }}
+{% endblock %}
+
+{% block body %}
+	<main
+		class="container py-5 position">
+
+		<!-- Corps -->
+		<section class="d-flex row justify-content-center mb-5 pb-5 ">
+			<div class="col-12 text-center mb-3">
+				<h3>
+					<font color="#cc0000">
+						{{ page.libPage }}
+						toutes marques</font>
+				</h3>
+			</div>
+
+			<div class="col-lg-8 col-md-12 justify-content-center row d-flex">
+				<article class="row d-flex justify-content-center col-12 py-3 mx-auto">
+					<div class="col-lg-4 col-md-12 align-self-center mb-2">
+						{% for image1 in images %}
+							{% if loop.first %}
+								{% if image1 %}
+									<img src="/img/{{image1.libImg}}" class="w-100 d-block mx-auto" alt="/img/{{image1.descrImg}}">
+								{% else %}
+									<img src="/img/default.png" class="w-50 d-block mx-auto" alt="/img/default.png">
+								{% endif %}
+							{% endif %}
+						{% endfor %}
+					</div>
+
+					<div class="col-lg-8 col-md-12 justify-content-center align-self-center">
+						<p>{{page.bloc1|raw}}</p>
+					</div>
+				</article>
+
+				<article class="row d-flex justify-content-center col-12 py-3 mx-auto">
+					<div class="col-lg-8 col-md-12 mb-2 align-self-center justify-content-center">
+						<p>{{page.bloc2|raw}}</p>
+					</div>
+					<div class="col-lg-4 col-md-12 align-self-center">
+						{% for image2 in images %}
+							{% if loop.last %}
+								{% if image2 %}
+									<img src="/img/{{image2.libImg}}" class="w-100 d-block mx-auto" alt="/img/{{image2.descrImg}}">
+								{% else %}
+									<img src="/img/default.png" class="w-50 d-block mx-auto" alt="/img/default.png">
+								{% endif %}
+							{% endif %}
+						{% endfor %}
+					</div>
+				</article>
+
+				<article class="row d-flex justify-content-center col-12 py-3 mx-auto">
+					<div class="col-12 mb-2 align-self-center justify-content-center">
+						<p>{{page.bloc3|raw}}</p>
+					</div>
+				</article>
+
+				<hr class="separator-entretien pb-3">
+			</div>
+
+			<div class="row d-flex col-lg-4 col-md-12 justify-content-center ml-2 vr align-self-center">
+				<h4>
+					<font color="#cc0000">Forfaits</font>
+				</h4>
+				<article class="row d-flex justify-content-center align-self-center col-12 py-5">
+
+					{% for forfait in forfaits %}
+
+						<div class="col-9">{{forfait.libForfait}}</div>
+						<div class="col-3 text-right">
+							<font color="#cc0000">
+								{{forfait.prixForfait}}
+								€
+							</font>
+						</div>
+
+					{% endfor %}
+				</article>
+			</div>
+
+			{# <div class="phone-services">
+				<i class='fa fa-phone'></i>
+			</div> #}
+
+		</section>
+
+	</main>
+{% endblock %}

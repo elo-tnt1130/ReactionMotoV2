@@ -1,0 +1,16 @@
+{{ form_start(form) }}
+    {{form_label (form.lib_forfait)}} <font style="color:red">*</font>
+    {{form_widget (form.lib_forfait)}}
+    
+    {{form_label (form.descr_forfait)}}
+    {{form_widget (form.descr_forfait)}}
+
+    {{form_label (form.prix_forfait)}} <font style="color:red">*</font>
+    {{form_widget (form.prix_forfait)}}
+    
+    {{form_label (form.services)}} <font style="color:red">*</font>
+    {{form_widget (form.services)}}
+
+    {{ form_rest(form) }} 
+    <button class="btn btn-info mt-3">{{ button_label|default('Enregistrer') }}</button>
+{{ form_end(form) }}

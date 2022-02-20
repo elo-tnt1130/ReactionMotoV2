@@ -1,0 +1,238 @@
+/* -------------------------------------------------------------------------- */
+/*                                    FONTS                                   */
+/* -------------------------------------------------------------------------- */
+
+@font-face {
+  font-family: "roboto";
+  src: url("/css/fonts/Roboto-Regular.ttf"), url("/css/fonts/Roboto-Regular.woff"),
+    url("/css/fonts/Roboto-Regular.woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "roboto-light";
+  src: url("/css/fonts/Roboto-Light.ttf"),
+    url("/css/fonts/Roboto-Light.woff") format("woff"),
+    url("/css/fonts/Roboto-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "roboto-bold";
+  src: url("/css/fonts/Roboto-Bold.ttf"),
+    url("/css/fonts/Roboto-Bold.woff") format("woff"),
+    url("/css/fonts/Roboto-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "roboto-italic";
+  src: url("/css/fonts/Roboto-Italic.ttf"),
+    url("/css/fonts/Roboto-Italic.woff") format("woff"),
+    url("/css/fonts/Roboto-Italic.woff2") format("woff2");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "roboto-light-italic";
+  src: url("/css/fonts/Roboto-LightItalic.ttf"),
+    url("/css/fonts/Roboto-LightItalic.woff") format("woff"),
+    url("/css/fonts/Roboto-LightItalic.woff2") format("woff2");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "roboto-bold-italic";
+  src: url("/css/fonts/Roboto-BoldItalic.ttf"),
+    url("/css/fonts/Roboto-BoldItalic.woff") format("woff"),
+    url("/css/fonts/Roboto-BoldItalic.woff2") format("woff2");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "brandontext-bold";
+  src: url("/css/fonts/BrandonText-Bold.otf"),
+    url("/css/fonts/BrandonText-Bold.woff") format("woff"),
+    url("/css/fonts/BrandonText-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "brandontext-light";
+  src: url("/css/fonts/BrandonText-Light.otf"),
+    url("/css/fonts/BrandonText-Light.woff") format("woff"),
+    url("/css/fonts/BrandonText-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "brandontext";
+  src: url("/css/fonts/BrandonText-Regular.otf"),
+    url("/css/fonts/BrandonText-Regular.woff") format("woff"),
+    url("/css/fonts/BrandonText-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    BODY                                    */
+/* -------------------------------------------------------------------------- */
+
+body {
+  background-color: #eeeeee !important;
+  /* overflow-x:hidden; */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "brandontext", Tahoma, "DejaVu Sans", sans-serif;
+}
+
+p {
+  font-family: "roboto", "DejaVu Sans", "Segoe UI", Verdana, sans-serif;
+  font-size: 1rem;
+}
+
+.btn-danger {
+  background-color: #cc0000 !important;
+  color: #333333 !important;
+  white-space: nowrap;
+}
+
+.btn-info {
+  background-color: limegreen !important;
+  border-color: limegreen !important;
+  color: #333333 !important;
+  white-space: nowrap;
+}
+
+.text-danger {
+  color: greenyellow;
+}
+
+.cellwidth {
+  max-width : 5rem; 
+}
+
+.bordertest {
+  border : solid 1px blueviolet;
+}
+
+.custom-file-label::after {
+  content: "Parcourir" !important;
+  /* opacity: 1 !important; */
+}
+
+.img-edit{
+  width: 5rem !important;
+}
+
+.img-prez{
+  width: 6rem !important;
+}
+
+.modeles {
+  border-top: #cc0000 1px solid;
+}
+
+.neuf{
+  width: 47%;
+  padding-right: 1.5rem;
+}
+
+.occaz{
+border-left: #5f5f5f;
+}
+
+.cellwidthimg {
+  max-width :4rem; 
+}
+
+.modelformcard {
+  background-color: ghostwhite;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   SIDEBAR                                   */
+/* -------------------------------------------------------------------------- */
+
+.img-logo {
+  height: 50px;
+  width: auto;
+}
+
+.nav-link {
+  color: lightgreen !important;
+  font-size: 0.75rem;
+}
+
+.nav-link:hover {
+  color: lightgreen !important;
+  background-color: green !important;
+}
+
+.navbar-brand>h4 {
+  color : greenyellow !important;
+}
+
+.dropdown-divider{
+  border-top:#5f5f5f 1px solid !important;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                MEDIA QUERIES                               */
+/* -------------------------------------------------------------------------- */
+/* Extra small devices (portrait phones, less than 576px) */
+@media (min-width: 576px) {
+
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .neuf{
+    width: 47%;
+    padding-right: 1.5rem;
+  }
+  
+  .occaz{
+    width: 47%;
+    padding-left: 0.5rem;
+  }
+  
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .neuf{
+    width: 47%;
+    padding-right: 1.5rem;
+  }
+  
+  .occaz{
+    width: 47%;
+    padding-left: 0.5rem;
+  }
+  
+}

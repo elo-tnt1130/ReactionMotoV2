@@ -1,0 +1,132 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Modèles {% endblock %}
+
+{% block body %}
+	<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4 mb-3">
+	{{parent()}}
+		<div class="container-fluid m-2">
+			<div class="row d-flex justify-content-between mb-3">
+				<h1 class="my-2">Modèles</h1>
+				<a href="{{ path('modeles_new') }}" class="btn btn-info align-self-center mr-4">
+					<i class="fa fa-plus"></i>
+					Ajouter</a>
+			</div>
+
+			<div class="container-fluid m-2">
+
+				<p class='alert-info p-3'>
+					<i class="fa fa-info-circle"></i>
+					Le contenu de cette page se répercute sur les pages modèles de moto.
+				</p>
+
+				<table class="table table-hover table-striped">
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>Image principale</th>
+							<th>Marque</th>
+							<th>Modèle</th>
+							<th>Description</th>
+							<th>Moteur en cm3</th>
+							<th>Consommation</th>
+							<th>Prix</th>
+							<th colspan="2">Actions</th>
+						</tr>
+					</thead>
+					
+					<tbody>
+						{% for modele in modeles %}
+							{% if modele.checkOccasion ? false : true %}
+								<tr>
+									<td>{{ modele.id }}</td>
+									<td class="cellwidthimg">
+										{% if modele.img1Moto !="" %}
+											<img src="/img/{{ modele.img1Moto }}" alt="{{ modele.libModele }}" class="img-prez img-fluid mx-auto">
+										{% else %}
+											<img src="/img/default.png" alt="default_image" class="img-prez img-fluid mx-auto">
+										{% endif  %}
+									</td>
+									<td>{{ modele.marque }}</td>
+									<td>{{ modele.libModele }}</td>
+									<td style="word-wrap: break-word;min-width: 160px;max-width: 250px;">{{ modele.descrNeuf|raw }}</td>
+									<td>{{ modele.moteur }}</td>
+									<td>{{ modele.consoNeuf }}</td>
+									<td>{{ modele.prixMoto }}</td>
+
+									<td>
+										<a href="{{ path('modeles_edit', {'id': modele.id}) }}" class="btn btn-info">
+									<i class="fa fa-pen"></i>
+									Modifier</a>
+										<a href="{{ path('modeles_delete', {'id': modele.id}) }}" class="btn btn-danger">
+									<i class="fa fa-trash-alt"></i>
+									Supprimer</a>
+									</td>
+								</tr>
+							{% endif %}
+						{% else %}
+							<tr>
+								<td colspan="20">no records found</td>
+							</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+
+				<table class="table table-hover table-striped">
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>Image principale</th>
+							<th>Marque</th>
+							<th>Modèle</th>
+							<th>Lien LBC</th>
+							<th>Travaux effectués</th>
+							<th>Equipements</th>
+							<th>Kilométrage</th>
+							<th>Prix</th>
+							{# <th>Check_occasion</th> #}
+							<th colspan="2">Actions</th>
+						</tr>
+					</thead>
+					<tbody>
+						{% for modele in modeles %}
+							{% if modele.checkOccasion ? true : false %}
+								<tr>
+									<td>{{ modele.id }}</td>
+									<td class="cellwidthimg">
+										{% if modele.img1Moto !="" %}
+											<img src="/img/{{ modele.img1Moto }}" alt="{{ modele.libModele }}" class="img-prez img-fluid mx-auto">
+										{% else %}
+											<img src="/img/default.png" alt="default_image" class="img-prez img-fluid mx-auto">
+										{% endif %}
+									</td>
+									<td>{{ modele.marque }}</td>
+									<td>{{ modele.libModele }}</td>
+									{# <td>{{ modele.descrOccasion|raw }}</td> #}
+									<td>{{ modele.lienOccasion }}</td>
+									<td>{{ modele.travauxOccasion|raw }}</td>
+									<td>{{ modele.equipementsOccasion|raw }}</td>
+									<td>{{ modele.kilometrageOccasion }}</td>
+									<td>{{ modele.prixMoto }}</td>
+									{# <td>{{ modele.checkOccasion ? 'Yes' : 'No' }}</td> #}
+									<td>
+										<a href="{{ path('modeles_edit', {'id': modele.id}) }}" class="btn btn-info">
+									<i class="fa fa-pen"></i>
+									Modifier</a>
+										<a href="{{ path('modeles_delete', {'id': modele.id}) }}" class="btn btn-danger">
+									<i class="fa fa-trash-alt"></i>
+									Supprimer</a>
+									</td>
+								</tr>
+							{% endif %}
+						{% else %}
+							<tr>
+								<td colspan="20">no records found</td>
+							</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</main>
+{% endblock %}

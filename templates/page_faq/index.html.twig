@@ -1,0 +1,51 @@
+{% extends 'base_front.html.twig' %}
+
+{% block meta %}
+  		<meta name="description" content="{{page.metadescr}}">
+		<meta name="keywords" content="{{page.metakw}}">
+  {% endblock %}
+
+{% block title %}{{page.libPage}}
+{% endblock %}
+
+{% block body %}
+	<main class="pb-5 mb-5 position">
+
+		<section class="title p-2 my-2 text-center">
+			<h3>
+				<font color="#cc0000">Foire aux questions</font>
+			</h3>
+		</section>
+		<div class="container my-3 pb-5">
+			<section class="accordion mb-3" id="FAQ">
+
+				<article class="card">
+					{% for faq in faqs %}
+						<div class="card-header" id="heading{{faq.id}}">
+							<h2 class="mb-0">
+								<button class="btn btn-link btn-block text-left faq" type="button" data-toggle="collapse" data-target="#collapse{{faq.id}}" aria-expanded=true aria-controls="collapse{{faq.id}}">
+									<strong>
+
+										<font color="#cc0000">
+											🏍
+										</font>
+									</strong>
+									{{faq.question}}
+								</button>
+							</h2>
+						</div>
+
+						<div id="collapse{{faq.id}}" class="collapse" aria-labelledby="heading{{faq.id}}" data-parent="#FAQ">
+							<div class="card-body">
+								{{faq.reponse}}
+							</div>
+						</div>
+					{% endfor %}
+				</article>
+				
+			</section>
+
+		</div>
+
+	</main>
+{% endblock %}

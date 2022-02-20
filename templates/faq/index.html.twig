@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}FAQ
+{% endblock %}
+
+{% block body %}
+	<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4 mb-3">
+{{parent()}}
+		<div class="container-fluid m-2">
+			<div class="row d-flex justify-content-between mb-3">
+				<h1 class="my-2">FAQ</h1>
+				<a href="{{ path('faq_new') }}" class="btn btn-info align-self-center mr-4">
+					<i class="fa fa-plus"></i>
+					Ajouter</a>
+			</div>
+
+			<div class="container-fluid m-2">
+
+			<p class='alert-info p-3'><i class="fa fa-info-circle"></i> Le contenu de cette page se répercute sur les pages FAQ.</p>
+
+				<table class="table table-hover table-striped">
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>Question</th>
+							<th>Reponse</th>
+							<th>Thématique</th>
+							<th colspan="2">Actions</th>
+						</tr>
+					</thead>
+					<tbody>
+						{% for faq in faqs %}
+							<tr>
+								<td>{{ faq.id }}</td>
+								<td style="word-wrap: break-word;min-width: 160px;max-width: 320px;">{{ faq.question }}</td>
+								<td style="word-wrap: break-word;min-width: 160px;max-width: 320px;">{{ faq.reponse|raw }}</td>
+								<td style="word-wrap: break-word;min-width: 160px;max-width: 160px;">
+									{{ faq.themeFaq}}
+								</td>
+								<td class='align-middle'>
+									<a href="{{ path('faq_edit', {'id': faq.id}) }}" class="btn btn-info">
+										<i class="fa fa-pen"></i>
+										Modifier</a>
+									<a href="{{ path('faq_delete', {'id': faq.id}) }}" class="btn btn-danger">
+										<i class="fa fa-trash-alt"></i>
+										Supprimer</a>
+								</td>
+							</tr>
+						{% else %}
+							<tr>
+								<td colspan="6">no records found</td>
+							</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+			</div>
+
+		</main>
+	{% endblock %}

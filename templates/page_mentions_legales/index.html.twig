@@ -1,0 +1,297 @@
+{% extends 'base_front.html.twig' %}
+
+{% block meta %}
+	<meta name="description" content="{{page.metadescr}}">
+	<meta name="keywords" content="{{page.metakw}}">
+{% endblock %}
+
+{% block title %}
+	{{page.libPage}}
+{% endblock %}
+
+{% block body %}
+	<main class='pb-5 position mr-4'>
+
+
+		<div class="container-fluid m-3 pb-2">
+			<h2>{{page.libPage}}</h2>
+
+			<section class="accordion" id="FAQ">
+
+				<article class="card">
+					<div class="card-header" id="heading1">
+						<h2 class="mb-0">
+							<button class="btn btn-link btn-block text-left faq" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+								<strong>
+
+									<font color="#cc0000">
+										🏍
+									</font>
+								</strong>
+								Identification
+							</button>
+						</h2>
+					</div>
+
+					<div id="collapse1" class="collapse" aria-labelledby="heading1" data-parent="#FAQ">
+						<div class="card-body">
+							<div class="mx-4">
+								<h5>🏍 Reaction Moto</h5>
+								<p>SARL au capital social de 9000 €
+									<br>
+									RCS Pontoise B 511 062 671 00017
+									<br>
+									Code APE 4540Z
+									<br>
+									N° TVA : FR 11 511 062 671
+									<br>
+									Siège social : 6 Rue Django Reinhardt – 95310 St Ouen l’Aumône -FRANCE
+								</p>
+							</div>
+
+							<div class="mx-4">
+								<h5>🏍 Responsable des contenus : Christian BARROIS</h5>
+								<p>Email : reaction.moto@orange.fr // reactionmoto@gmail.com
+									<br>
+									Tel : 01.30.30.40.64 - Fax : 01.30.30.41.28</p>
+							</div>
+
+							<div class="mx-4">
+								<h5>🏍 Edition et gestion du site web</h5>
+								<p>Eloïse Caille, étudiante en licence pro MMI
+									<br>
+									email : elo.caille@gmail.com - tel : 06.61.56.53.99</p>
+							</div>
+
+							<div class="mx-4">
+								<h5>🏍 Hébergement du site web</h5>
+
+								<p>1&1 IONOS SARL - Capital social de 100 000 €<br>
+									RCS Sarreguemines B 431 303 775<br>
+									Code APE 6311Z
+									<br>
+									N°TVA : FR 13 43 13 03 775
+									<br>
+									Siège social : 7, place de la Gare - BP 70109 - 57200 Sarreguemines Cedex - France
+									<br>
+									Contact : 0970 808 911 - info@ionos.fr
+								</p>
+							</div>
+						</div>
+					</div>
+				</article>
+
+				<article class="card">
+					<div class="card-header" id="heading3">
+						<h2 class="mb-0">
+							<button class="btn btn-link btn-block text-left faq" type="button" data-toggle="collapse" data-target="#collapse3" aria-expanded="true" aria-controls="collapse3">
+								<strong>
+
+									<font color="#cc0000">
+										🏍
+									</font>
+								</strong>
+								Respect de la vie privée et des données personnelles - Droit d’accès et de modification des données concernant nos visiteurs
+							</button>
+						</h2>
+					</div>
+
+					<div id="collapse3" class="collapse" aria-labelledby="heading3" data-parent="#FAQ">
+						<div class="card-body">
+							<div class="mx-4">
+								<h5 class="mx-2">
+									🏍 Politique de respect de la vie privée adoptée par Reaction Moto</h5>
+								<p>Vous disposez d’un droit d’accès, de modification, de rectification et de suppression des données
+																																																		                        qui vous concernent, s’il s’en trouvait (art.34 de la loi « Informatique et Libertés » nº 78-27
+																																																		                        du 16 janvier 1978).
+									<br>
+									Conformément à la législation, la Commission Informatique et Liberté (CNIL) nous a délivré un
+																																																		                        numéro de déclaration simplifié NS 048 qui est le suivant : (en cours d’obtention).
+																																																		                        De la sorte, nous sommes autorisés à traiter ces données du fait de votre autorisation expresse
+																																																		                        lors de la soumission des formulaires d’inscription, et par respect des obligations prévues par
+																																																		                        la loi ainsi que dans le cadre de l’exécution des contrats commerciaux passés avec nos clients.
+									<br>
+									Nous conservons ces données, au plus, pour une durée de 3 ans à compter de la date de la
+																																																		                        dernière activité enregistrée sur l’espace client d’un utilisateur. Passé ce délai, les données
+																																																		                        sont supprimées de nos bases d’informations.
+									<br>
+									Lors de la création de votre espace client, si vous avez opté pour l’utilisation d’un
+																																																		                        authentificateur tiers (Facebook, Google), nous avons pu collecter vos données de manières
+																																																		                        indirectes. Elles restent soumises au droit d’accès, de rectification et de suppression des
+																																																		                        données précité.
+									<br>
+									Il vous est possible, en cas de litige, de faire une réclamation auprès des services de la CNIL.
+																																																		                        Un point contact vous sera fourni sur demande.
+								</p>
+								<br>
+
+								<h5 class="mx-2">
+									🏍 Utilisation des cookies</h5>
+								<p>Reaction Moto peut être amené à utiliser le système des « cookies ». Cela ne nous permet pas de
+																																																		                        vous identifier mais de collecter des informations lors de votre passage sur notre site afin de
+																																																		                        savoir quelles sont les parties de notre site qui vous intéressent, la prévention de fraudes, ou
+																																																		                        encore tout simplement de répondre à la législation. Ces données collectées ne seront jamais vendues et
+																																																		                        servent à l’utilisation exclusive de notre site internet.
+									<br>
+									Les cookies, qui sont de petits fichiers informatiques stockés dans vos navigateurs, vous
+																																																		                        évitent également de devoir fournir à chaque fois des informations déjà communiquées, dans la
+																																																		                        mesure où ils se souviennent des informations communiquées antérieurement, si toutefois vous avez donné votre
+																																																		                        accord à cette fin.
+																																																		                        La durée de validité du consentement donné dans ce cadre est de 13 mois maximum.<br>
+									Nous conservons ces données, au plus, pour une durée de 3 ans à compter de la date de la
+																																																		                        dernière activité enregistrée sur l’espace client d’un utilisateur. Passé ce délai, les données
+																																																		                        sont supprimées de nos bases d’informations.
+																																																		                        Il existe 3 catégories de cookies :
+									<ul>
+										<li>Cookies nécessaires : ils rendent un site utilisable en activant des fonctions de base
+																																																																                                (navigation de page, accès aux zones sécurisées, …).
+																																																																                                site.</li>
+										<li>
+											Cookies statistiques : permettent de comprendre comment les utilisateurs interagissent sur le
+										</li>
+										<li>Cookies marketing : utilisés pour effectuer le suivi des visiteurs au travers des sites.</li>
+									</ul>
+									Exception faite des cookies nécessaires au bon fonctionnement du site, leur utilisation est
+																																																		                        soumise au consentement de l’utilisateur. Toutefois, l’utilisateur a la possibilité de s’opposer à
+																																																		                        l’utilisation de ces traceurs en paramétrant son navigateur.<br>
+									Il vous est possible de détecter l’existence des cookies et, le cas échéant, de les supprimer.
+																																																		                        Il vous est également possible de vous opposer à l’enregistrement de cookies en désactivant cette fonction
+																																																		                        de votre navigateur dans les préférences de celui-ci. Le refus d’autorisation des cookies peut amener à certains
+																																																		                        dysfonctionnements de notre site pour lesquels notre responsabilité ne saura être remise en cause.
+									<ul>
+										<li>Sur Internet Explorer : Cliquer sur l’onglet outil / options internet. Cliquer sur Confidentialité et
+																																																																                                choisir
+																																																																                                Bloquer tous les cookies. Valider.
+											<a href="https://windows.microsoft.com/fr-fr/internet-explorer/delete-manage-cookies#ie=ie-11" target="_blank">Plus d'informations</a>
+										</li>
+										<li>Sur Mozilla Firefox : Cliquer sur le bouton Firefox, puis aller dans l'onglet Options. Cliquer sur
+																																																																                                l'onglet Vie
+																																																																                                privée. Paramétrer les Règles de conservation sur : utiliser les paramètres personnalisés pour l'historique.
+											<a href="https://support.mozilla.org/fr/kb/effacer-cookies-supprimer-infos-sites-enregistrees" target="_blank" rel="noopener noreferrer"></a>
+										</li>
+										<li>Sur Safari : Cliquer sur menu. Sélectionner Paramètres. Cliquer sur Afficher les paramètres avancés. Dans
+																																																																                                la
+																																																																                                section "Confidentialité", cliquer sur Paramètres de contenu. Dans la section "Cookies", bloquer les
+																																																																                                cookies.
+											<a href="https://support.apple.com/kb/ht1677?viewlocale=fr_FR&locale=fr_FR" target="_blank" rel="noopener noreferrer"></a>
+										</li>
+										<li>Sur Google Chrome : Cliquer sur menu. Sélectionner Paramètres. Cliquer sur Afficher les paramètres
+																																																																                                avancés. Dans
+																																																																                                la section "Confidentialité", cliquer sur préférences. Dans l'onglet "Confidentialité", bloquer les cookies.
+											<a href="https://support.google.com/chrome/answer/95647?hl=fr" target="_blank" rel="noopener noreferrer"></a>
+										</li>
+									</ul>
+								</p>
+
+								<h5 class="mx-2">
+									🏍 Sécurité et confidentialité sur le réseau</h5>
+								<p>Les messages que vous nous faites parvenir par l’intermédiaire d’Internet peuvent être interceptés sur le
+																																																		                        réseau. Jusqu’à ce qu’ils nous parviennent, leur confidentialité ne peut être garantie.
+									<br>
+									Nous vous recommandons de vous assurer que vous ne divulguez pas d’informations personnelles ou
+																																																		                        confidentielles inutiles, sensibles ou provenant de tiers, notamment par voie électronique, l’indication de provenance des
+																																																		                        messages électroniques pouvant être falsifiée.
+									<br>
+									Pour nous communiquer de telles informations, utilisez impérativement la voie postale. En conséquence,
+																																																		                        aucune plainte, déclaration ou demande de conseil à ce sujet transmise par message Internet ne sera prise en
+																																																		                        compte.
+								</p>
+							</div>
+						</div>
+					</div>
+				</article>
+
+				<article class="card">
+					<div class="card-header" id="heading4">
+						<h2 class="mb-0">
+							<button class="btn btn-link btn-block text-left faq" type="button" data-toggle="collapse" data-target="#collapse4" aria-expanded="true" aria-controls="collapse4">
+								<strong>
+
+									<font color="#cc0000">
+										🏍
+									</font>
+								</strong>
+								Respect des droits d’auteur
+							</button>
+						</h2>
+					</div>
+
+					<div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#FAQ">
+						<div class="card-body">
+							<div class="mx-4">
+								<h5>
+									🏍 Utilisation des informations du site et droits d’auteur</h5>
+								<p>L’utilisation de documents (photos, textes, images, etc.) provenant du site https://www.reactionmoto.com/
+																																															                        n’est autorisée qu’à titre d’information et pour un usage privé. Toute utilisation à des fins commerciales est
+																																															                        interdite.
+									<br>
+									Reaction Moto s’efforce d’assurer l’exactitude et la mise à jour des informations diffusées sur
+																																															                        https://www.reactionmoto.com/. Toutefois, il appartient aux visiteurs de vérifier les informations présentes
+																																															                        sur le site, y compris en nous contactant.
+									<br>
+									De fait, Reaction Moto décline toute responsabilité pour toute imprécision, inexactitude ou omission portant
+																																															                        sur des informations disponibles sur le site, pour tous dommages résultant d’une intrusion frauduleuse d’un tiers
+																																															                        ayant entraîné une modification des informations mises à disposition sur le site et plus généralement pour tous
+																																															                        dommages, directs ou indirects, quelles qu’en soient les causes, origines, nature ou conséquences, provoqués à raison
+																																															                        de l’accès de quiconque au site ou de l’impossibilité d’y accéder, de même que l’utilisation du site et/ou du
+																																															                        crédit accordé à une quelconque information provenant directement ou indirectement de ce dernier.
+									<br>
+									Par ailleurs, sauf mention contraire, les droits de propriété intellectuelle sur les documents contenus dans
+																																															                        le site et chacun des éléments créés pour le site « https://www.reactionmoto.com/ » sont la propriété exclusive de
+																																															                        Réaction Moto ou de ses fournisseurs, ceux-ci ne concédant aucune licence, ni aucun droit que celui de consulter le
+																																															                        site.
+									<br>
+									La reproduction des documents publiés sur le site est autorisée à des fins d’informations pour un usage
+																																															                        personnel et privé ; toute reproduction et toute utilisation de copies réalisées à d’autres fins est expressément
+																																															                        interdite.
+									<br>
+									Toutes les marques citées dans ce site appartiennent à leurs compagnies respectives. Les produits, logos et
+																																															                        images utilisés dans les pages de ce site sont la propriété de leur marque respective.
+								</p>
+							</div>
+						</div>
+					</div>
+				</article>
+
+				<article class="card">
+					<div class="card-header" id="heading5">
+						<h2 class="mb-0">
+							<button class="btn btn-link btn-block text-left faq" type="button" data-toggle="collapse" data-target="#collapse5" aria-expanded="true" aria-controls="collapse5">
+								<strong>
+
+									<font color="#cc0000">
+										🏍
+									</font>
+								</strong>
+								Accessibilité du site et loi française
+							</button>
+						</h2>
+					</div>
+
+					<div id="collapse5" class="collapse" aria-labelledby="heading5" data-parent="#FAQ">
+						<div class="card-body">
+							<div class="mx-4">
+								<h5>
+									🏍 Informations d’ordre technique</h5>
+								<p>
+									Le présent site est accessible 24 heures sur 24 et 7 jours sur 7, à l’exception des cas de force majeure,
+																																												                        difficultés informatiques, maintenance, difficultés liées à la structure des réseaux de communication ou
+																																												                        difficultés d’ordre technique.
+								</p>
+
+								<h5>
+									🏍 Application de la loi Française</h5>
+								<p>
+									Le non-respect des présentes dispositions expose le contrevenant à des poursuites et à des sanctions pénales. Le présent document est régi et interprété selon le droit Français et relève de la compétence exclusive des tribunaux français. Si l’une des dispositions du présent texte s’avérait nulle, non valide ou sans effet juridique, toutes les autres dispositions demeureraient applicables.
+								</p>
+							</div>
+						</div>
+					</div>
+				</article>
+
+			</section>
+
+		</div>
+
+	</main>
+{% endblock %}

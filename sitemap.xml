@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<urlset xmlns="http://www.google.com/schemas/sitemap/0.84" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+		<url>
+			<loc>http://reactionmoto.com/</loc>
+			<changefreq>weekly</changefreq>
+		</url>
+
+		<url>
+			<loc>http://reactionmoto.com/#</loc>
+			<changefreq>weekly</changefreq>
+		</url>
+
+		<url>
+			<loc>http://reactionmoto.com/vente/</loc>
+			<changefreq>weekly</changefreq>
+		</url>
+
+		<url>
+			<loc>http://reactionmoto.com/vente/benelli</loc>
+			<changefreq>weekly</changefreq>
+		</url>
+
+		<url>
+			<loc>http://reactionmoto.com/vente/brixton</loc>
+			<changefreq>weekly</changefreq>
+		</url>
+
+		<url>
+			<loc>http://reactionmoto.com/vente/occasions</loc>
+			<changefreq>weekly</changefreq>
+		</url>
+
+		<url>
+			<loc>http://reactionmoto.com/banc_puissance</loc>
+			<changefreq>weekly</changefreq>
+		</url>
+
+		<url>
+			<loc>http://reactionmoto.com/entretien</loc>
+			<changefreq>weekly</changefreq>
+		</url>
+
+		<url>
+			<loc>http://reactionmoto.com/restauration</loc>
+			<changefreq>weekly</changefreq>
+		</url>
+
+		<url>
+			<loc>http://reactionmoto.com/prepa_perso</loc>
+			<changefreq>weekly</changefreq>
+		</url>
+
+		<url>
+			<loc>http://reactionmoto.com/actus</loc>
+			<changefreq>weekly</changefreq>
+		</url>
+
+		<url>
+			<loc>http://reactionmoto.com/contact</loc>
+			<changefreq>weekly</changefreq>
+		</url>
+
+		<url>
+			<loc>http://reactionmoto.com/faq</loc>
+			<changefreq>weekly</changefreq>
+		</url>
+
+		<url>
+			<loc>http://reactionmoto.com/#carouselhome</loc>
+			<changefreq>weekly</changefreq>
+		</url>
+
+		<url>
+			<loc>http://reactionmoto.com/page/catalogue_marques</loc>
+			<changefreq>weekly</changefreq>
+		</url>
+
+		<url>
+			<loc>http://reactionmoto.com/mentions_legales</loc>
+			<changefreq>weekly</changefreq>
+		</url>
+
+	</urlset>
+

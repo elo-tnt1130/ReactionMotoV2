@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Modifier le moteur -
+	{{ moteur.cylindree }}
+	cc
+{% endblock %}
+
+{% block body %}
+
+	<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4 mb-3">
+		<div class="col-12">
+			<h1>Modifier le moteur -
+				{{ moteur.cylindree }}
+				cc</h1>
+			<a href="{{ path('moteurs_index') }}" class="btn btn-info">
+				<i class="fa fa-arrow-left"></i>
+				Retour à la liste
+			</a>
+		</div>
+
+		<div class="container">
+			{{ form_start(form)}}
+			{{form_label (form.cylindree)}}
+			<font style="color:red">*</font>
+			{{form_widget (form.cylindree)}}
+
+			{{form_label (form.puissance_ch)}}
+			{{form_widget (form.puissance_ch)}}
+
+			{{form_label (form.RegimeMoteurPuissance)}}
+			{{form_widget (form.RegimeMoteurPuissance)}}
+
+			{{form_label (form.couple_nm)}}
+			{{form_widget (form.couple_nm)}}
+
+			{{form_label (form.RegimeMoteurCouple)}}
+			{{form_widget (form.RegimeMoteurCouple)}}
+			{{ form_rest(form)}}
+
+			<div class="row mt-3">
+				<button type="submit" class="btn btn-info mr-2">
+					<i class="fa fa-pen"></i>
+					Modifier</button>
+				{{ include('moteurs/_delete_form.html.twig') }}
+			</div>
+			{{ form_end(form)}}
+		</div>
+
+	</main>
+
+{% endblock %}

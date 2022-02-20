@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Couleurs{% endblock %}
+
+{% block body %}
+	<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4 p-4">
+		<div class="col-12">
+			<h1>Couleurs -
+				{{ couleur.libCouleur }}
+			</h1>
+			<a href="{{ path('couleurs_index') }}" class="btn btn-info">
+				<i class="fa fa-arrow-left"></i>
+				Retour à la liste
+			</a>
+		</div>
+		<div class="container my-3">
+			<table class="table">
+				<tbody>
+            <tr>
+                <th>Lib_couleur</th>
+                <td>{{ couleur.libCouleur }}</td>
+            </tr>
+            <tr>
+						<th class="cellwidth">Logo :</th>
+						<td>
+							{% if couleur.imgColor != "" %}
+								<img src="/img/{{ couleur.imgColor }}" alt="{{ couleur.libCouleur }}" class="w-25 img-fluid">
+							{% else %}
+								<img src="/img/default.png" alt="default_image" class="w-25 img-fluid">
+							{% endif %}
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<a href="{{ path('couleurs_edit', {'id': couleur.id})}}" class="btn btn-info mr-3">
+					<i class="fa fa-pen"></i>
+					Modifier</a>
+
+				{{ include('couleurs/_delete_form.html.twig') }}
+			</div>
+		</div>
+
+	</main>
+{% endblock %}

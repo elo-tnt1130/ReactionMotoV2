@@ -1,0 +1,124 @@
+<header>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+		<a class="navbar-brand" href="{{path('home')}}">
+			<img src="/img/logo-Occasions_60e9c656b5260.png" alt="logo_reaction-moto" class="img-logo">
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+
+
+				{% if currentPage == 'Accueil' %}
+					<li class="nav-item active">
+						<a class="nav-link" href="{{path('home')}}">Accueil
+						</a>
+					</li>
+				{% else %}
+					<li class="nav-item">
+						<a class="nav-link" href="{{path('home')}}">Accueil
+						</a>
+					</li>
+				{% endif %}
+
+
+				{% if currentPage == 'Vente de motos' or currentPage == 'Benelli' or currentPage == 'Brixton' or currentPage == 'Occasions' or currentPage == 'Modele' %}
+				<li class="nav-item dropdown active">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Vente de motos
+					</a>
+					<div class="dropdown-menu bg-dark text-white-50" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="{{path('page_vente')}}">Les marques</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="{{path('page_benelli')}}">Benelli</a>
+						<a class="dropdown-item" href="{{path('page_brixton')}}">Brixton</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="{{path('page_occasions')}}">Occasions</a>
+					</div>
+				</li>
+				{% else %}
+					<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Vente de motos
+					</a>
+					<div class="dropdown-menu bg-dark text-white-50" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="{{path('page_vente')}}">Les marques</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="{{path('page_benelli')}}">Benelli</a>
+						<a class="dropdown-item" href="{{path('page_brixton')}}">Brixton</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="{{path('page_occasions')}}">Occasions</a>
+					</div>
+				</li>
+					</li>
+				{% endif %}
+
+
+				{% if currentPage == 'Banc de puissance' or currentPage == 'Entretien' or currentPage == 'Restauration'  or currentPage == 'Préparation et personnalisation'  %}
+					<li class="nav-item dropdown active">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Services
+						</a>
+						<div class="dropdown-menu bg-dark text-white-50" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="{{path('page_banc_puissance')}}">Banc de puissance</a>
+							<a class="dropdown-item" href="{{path('page_entretien')}}">Entretien</a>
+							<a class="dropdown-item" href="{{path('page_restauration')}}">Restauration</a>
+							<a class="dropdown-item" href="{{path('page_prepa_perso')}}">Préparation et personnalisation</a>
+						</div>
+					</li>
+				{% else %}
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Services
+						</a>
+						<div class="dropdown-menu bg-dark text-white-50" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="{{path('page_banc_puissance')}}">Banc de puissance</a>
+							<a class="dropdown-item" href="{{path('page_entretien')}}">Entretien</a>
+							<a class="dropdown-item" href="{{path('page_restauration')}}">Restauration</a>
+							<a class="dropdown-item" href="{{path('page_prepa_perso')}}">Préparation et personnalisation</a>
+						</div>
+					</li>
+				{% endif %}
+
+				{% if currentPage == 'Actus' %}
+					<li class="nav-item active">
+						<a class="nav-link" href="{{path('page_actus')}}">Galerie</a>
+					</li>
+				{% else %}
+					<li class="nav-item">
+						<a class="nav-link" href="{{path('page_actus')}}">Galerie</a>
+					</li>
+				{% endif %}
+
+				{% if currentPage == 'Contactez-nous !' %}
+					<li class="nav-item active">
+						<a class="nav-link" href="{{path('page_contact')}}">Contact</a>
+					</li>
+				{% else %}
+					<li class="nav-item">
+						<a class="nav-link" href="{{path('page_contact')}}">Contact</a>
+					</li>
+				{% endif %}
+
+				{% if currentPage == 'FAQ' %}
+					<li class="nav-item active">
+						<a class="nav-link" href="{{path('page_faq')}}">FAQ</a>
+					</li>
+				{% else %}
+					<li class="nav-item">
+						<a class="nav-link" href="{{path('page_faq')}}">FAQ</a>
+					</li>
+				{% endif %}
+
+			</ul>
+
+		</div>
+		<div class="float-right pt-2 caillou">
+			<nav aria-label="breadcrumb">
+				<ol class="breadcrumb bg-dark text-white "> </ol>
+			</nav>
+		</div>
+	</nav>
+</header>

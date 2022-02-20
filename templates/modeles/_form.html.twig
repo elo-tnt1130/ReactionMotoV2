@@ -1,0 +1,213 @@
+{{ form_start(form) }}
+
+<div class="col-12 mb-2">
+	<section>
+		<h3>L'essentiel</h3>
+		<div class="row justify-content-around mt-3 pt-3 modelformcard">
+			<div class="col-12 row justify-content-around">
+				<div class="mb-3">
+					{{form_label (form.marque)}}
+					<font style="color:red">*</font>
+					{{form_widget (form.marque)}}
+				</div>
+
+				<div class="mb-3">
+					{{form_label (form.lib_modele)}}
+					<font style="color:red">*</font>
+					{{form_widget (form.lib_modele)}}
+				</div>
+
+				<div class="mb-3">
+					{{form_label (form.prix_moto)}}
+					<font style="color:red">*</font>
+					{{form_widget (form.prix_moto)}}
+				</div>
+
+				<div class="mb-3">
+					{{form_label (form.permis)}}
+					<font style="color:red">*</font>
+					{{form_widget (form.permis)}}
+				</div>
+			</div>
+
+			<div class="col-12 justify-content-around row">
+				<div class="mb-3 col-4">
+					{{form_label (form.aides_conduite)}}
+					{{form_widget (form.aides_conduite)}}
+				</div>
+
+				<div class="mb-3 col-8">
+					{{form_label (form.img1_moto)}}
+					<font style="color:red">*</font>
+					<div>
+						<div>
+							{% if modele.img1Moto !="" %}
+								<img src="/img/{{ modele.img1Moto}}" alt="{{ modele.libModele }}" class="mx-auto mb-2 img-edit">
+							{% else %}
+								<img src="/img/default.png" alt="default_image" class="mx-auto d-block mb-2 img-edit">
+							{% endif %}
+						</div>
+						<div>
+							{{form_widget (form.img1_moto)}}
+							{{form_help (form.img1_moto)}}
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="row justify-content-around mt-3 pt-3 modelformcard">
+			<div class="row justify-content-around pt-3 modelformcard">
+				<div class="mb-3 mx-5">
+					{{form_label (form.img2_moto)}}
+					<div>
+						{% if modele.img2Moto !="" %}
+							<img src="/img/{{ modele.img2Moto }}" alt="{{ modele.libModele }}" class="mx-auto d-block mb-2 img-edit">
+						{% else %}
+							<img src="/img/default.png" alt="default_image" class="mx-auto d-block mb-2 img-edit">
+						{% endif %}
+						{{form_widget (form.img2_moto)}}
+						{{form_help (form.img2_moto)}}
+					</div>
+				</div>
+
+				<div class="mb-3 mx-5">
+					{{form_label (form.img3_moto)}}
+					<div>
+						{% if modele.img3Moto !="" %}
+							<img src="/img/{{ modele.img3Moto }}" alt="{{ modele.libModele }}" class="mx-auto d-block mb-2 img-edit">
+						{% else %}
+							<img src="/img/default.png" alt="default_image" class="mx-auto d-block mb-2 img-edit">
+						{% endif %}
+						{{form_widget (form.img3_moto)}}
+						{{form_help (form.img3_moto)}}
+					</div>
+				</div>
+
+				<div class="mb-3 mx-5">
+					{{form_label (form.img4_moto)}}
+					<div>
+						{% if modele.img4Moto !="" %}
+							<img src="/img/{{ modele.img4Moto }}" alt="{{ modele.libModele }}" class="mx-auto d-block mb-2 img-edit">
+						{% else %}
+							<img src="/img/default.png" alt="default_image" class="mx-auto d-block mb-2 img-edit">
+						{% endif %}
+						{{form_widget (form.img4_moto)}}
+						{{form_help (form.img4_moto)}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<hr class="modeles w-50">
+
+	<section>
+		<h3 class='mt-3 mb-2'>Modèles neufs</h3>
+
+		<div class="row justify-content-center mt-3 pt-3 modelformcard">
+			<div class='row justify-content-center'>
+				<div class="mb-3 mx-3">
+					{{form_label (form.poids_neuf)}}
+					{{form_widget (form.poids_neuf)}}
+				</div>
+
+				<div class="mb-3 mx-3">
+					{{form_label (form.longueur_neuf)}}
+					{{form_widget (form.longueur_neuf)}}
+				</div>
+
+				<div class="mb-3 mx-3">
+					{{form_label (form.largeur_neuf)}}
+					{{form_widget (form.largeur_neuf)}}
+				</div>
+
+				<div class="mb-3 mx-3">
+					{{form_label (form.hauteur_selle_neuf)}}
+					{{form_widget (form.hauteur_selle_neuf)}}
+				</div>
+			</div>
+
+			<div class="row d-flex justify-content-around">
+
+				<div class="mb-3 mx-5">
+					{{form_label (form.couleurs)}}
+					{{form_widget (form.couleurs)}}
+					{# <img src="/img/{{modele.couleurs}}" alt=""> #}
+				</div>
+
+				<div class="mb-3">
+					<div class="mb-3">
+						{{form_label (form.moteur)}}
+						{{form_widget (form.moteur)}}
+					</div>
+
+					<div class="mb-3">
+						{{form_label (form.conso_neuf)}}
+						{{form_widget (form.conso_neuf)}}
+					</div>
+
+					<div class="mb-3">
+						{{form_label (form.fiche_technique_neuf)}}
+						{{form_widget (form.fiche_technique_neuf)}}
+						{{form_help (form.fiche_technique_neuf)}}
+					</div>
+				</div>
+			</div>
+
+			<div class="mb-3 px-5 w-100">
+				{{form_label (form.descr_neuf)}}
+				{{form_widget (form.descr_neuf|raw)}}
+			</div>
+		</div>
+	</section>
+
+	<hr class="modeles w-50">
+
+	<section class="">
+		<h3 class='mt-3 mb-2'>Occasions</h3>
+
+		<div class="justify-content-around py-3 modelformcard">
+			<div class="row justify-content-around">
+				<div class="mb-3 d-inline-block">
+					{{ form_label(form.check_occasion) }}
+					{{ form_widget(form.check_occasion) }}
+					{{ form_help(form.check_occasion) }}
+				</div>
+
+				<div class="mb-3 d-inline-block">
+					{{form_label (form.kilometrage_occasion)}}
+					{{form_widget (form.kilometrage_occasion)}}
+					{{form_help (form.kilometrage_occasion)}}
+				</div>
+
+				<div class="mb-3 d-inline-block">
+					{{form_label (form.lien_occasion)}}
+					{{form_widget (form.lien_occasion)}}
+					{{form_help (form.lien_occasion)}}
+				</div>
+			</div>
+
+			<div class="mb-3 px-5 w-100">
+				{{form_label (form.descr_occasion|raw)}}
+				{{form_widget (form.descr_occasion)}}
+			</div>
+
+			<div class="mb-3 px-5 w-100">
+				{{form_label (form.travaux_occasion)}}
+				{{form_widget (form.travaux_occasion|raw)}}
+				{{form_help (form.travaux_occasion)}}
+			</div>
+
+			<div class="mb-3 px-5 w-100">
+				{{form_label (form.equipements_occasion)}}
+				{{form_widget (form.equipements_occasion|raw)}}
+				{{form_help (form.equipements_occasion)}}
+			</div>
+		</div>
+	</section>
+</div>
+
+{{ form_widget(form)}}<button class="btn btn-info mt-3">{{ button_label|default('Enregistrer') }}</button>
+{{ form_end(form) }}

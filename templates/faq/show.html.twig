@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}FAQ - Question{% endblock %}
+
+{% block body %}
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4 p-4">
+		<div class="col-12">
+			<h1>FAQ -
+				{{ faq.question }}
+			</h1>
+			<a href="{{ path('faq_index') }}" class="btn btn-info">
+				<i class="fa fa-arrow-left"></i>
+				Retour à la liste
+			</a>
+		</div>
+		<div class="container my-3">
+			<table class="table">
+				<tbody>
+					<tr>
+						<th class="cellwidth">Question</th>
+						<td>{{ faq.question }}</td>
+					</tr>
+					<tr>
+						<th class="cellwidth">Réponse</th>
+						<td>{{ faq.reponse|raw }}</td>
+					</tr>
+					<tr>
+						<th class="cellwidth">Thématique</th>
+						<td>{{ faq.themeFAQ }}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<a href="{{ path('faq_edit', {'id': faq.id})}}" class="btn btn-info mr-3">
+					<i class="fa fa-pen"></i>
+					Modifier</a>
+
+				{{ include('faq/_delete_form.html.twig') }}
+			</div>
+		</div>
+
+	</main>
+{% endblock %}

@@ -1,0 +1,136 @@
+{% extends 'base_front.html.twig' %}
+
+
+{% block meta %}
+	<meta name="description" content="{{page.metadescr}}">
+	<meta name="keywords" content="{{page.metakw}}">
+{% endblock %}
+
+{% block title %}
+	{{page.libPage}}
+{% endblock %}
+
+{% block body %}
+
+	<main
+		class="container py-5 position">
+
+		<!-- Corps -->
+		<section class="d-flex row justify-content-center mb-5 pb-5 ">
+			<div class="col-12 text-center mb-5">
+				<h3>
+					<font color="#cc0000">
+						{{page.libPage}}
+					</font>
+				</h3>
+			</div>
+
+			{# <div class="phone-services">
+				<a href="tel:01.30.30.40.64"><i class='fa fa-phone'></i></a>
+			</div> #}
+
+			<div class="col-lg-6 col-md-12">
+				<article class="carousel-perso mb-1 w-100">
+					<div id="carouselPrepa" class="carousel slide carousel-restore carousel-fade" data-ride="carousel">
+
+						<div class="carousel-inner carousel-restore">
+							{% for image in carrouselPrepa %}
+								{% if loop.index0 == 0 %}
+									<div class="carousel-item active">
+								{% else %}
+									<div class="carousel-item">
+								{% endif %}
+				
+                					{% if image %}
+										<img src="/img/{{image.libImg}}" class="d-block img-carousel-restore mx-auto" alt="/img/{{image.descrImg}}">
+									{% else %}
+									<img src="/img/default.png" class="d-block img-carousel-restore mx-auto" alt="/img/default.png">
+									{% endif %}
+								</div>
+							{% endfor %}
+		
+        					</div>
+						</div>
+
+						<a class="carousel-control-prev" href="#carouselPrepa" role="button" data-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="sr-only">Précédent</span>
+						</a>
+						<a class="carousel-control-next" href="#carouselPrepa" role="button" data-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="sr-only">Suivant</span>
+						</a>
+
+					
+				</article>
+
+				<div class="col-12 text-center my-4">
+					<h5 class="subtitleH5">
+						Préparation
+					</h5>
+				</div>
+
+				<article class="row d-flex justify-content-center align-self-center col-12 pb-5 mx-auto">
+					<p>{{page.bloc1|raw}}</p>
+					<p>{{page.bloc2|raw}}</p>
+				</article>
+
+				<hr class="separator-prep pb-1">
+
+			</div>
+
+            </div>
+
+
+
+			<div class="col-lg-6 col-md-12 vr">
+				<article class="carousel-perso mb-1 w-100">
+					<div id="carouselPerso" class="carousel slide carousel-restore carousel-fade" data-ride="carousel">
+
+						<div class="carousel-inner carousel-restore">
+							{% for image in carrouselPerso %}
+								{% if loop.index0 == 0 %}
+									<div class="carousel-item active">
+								{% else %}
+									<div class="carousel-item">
+								{% endif %}
+							
+                                    {% if image %}
+                                        <img src="/img/{{image.libImg}}" class="d-block img-carousel-restore mx-auto" alt="/img/{{image.descrImg}}">
+                                    {% else %}
+                                        <img src="/img/default.png" class="d-block img-carousel-restore mx-auto" alt="/img/default.png">
+                                    {% endif %}
+
+								</div>
+							{% endfor %}
+							</div>
+						</div>
+
+						<a class="carousel-control-prev" href="#carouselPerso" role="button" data-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="sr-only">Précédent</span>
+						</a>
+						<a class="carousel-control-next" href="#carouselPerso" role="button" data-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="sr-only">Suivant</span>
+						</a>
+
+					
+				</article>
+
+				<div class="col-12 text-center my-4">
+					<h5 class="subtitleH5">
+						Personnalisation
+					</h5>
+				</div>
+
+				<article class="row d-flex justify-content-center align-self-center col-12 pb-5 mx-auto">
+					<p>{{page.bloc3|raw}}</p>
+				</article>
+			</div>
+
+			<p class="text-center m-3">{{page.bloc4|raw}}</p>
+</div>
+		</section>
+	</main>
+{% endblock %}

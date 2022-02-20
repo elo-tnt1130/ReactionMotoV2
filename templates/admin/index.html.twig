@@ -1,0 +1,103 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Back-Office
+{% endblock %}
+
+{% block body %}
+
+
+	<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+		<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+			<h1 class="h2">Tableau de bord</h1>
+		</div>
+
+		<p style="text-decoration: underline red;">
+			A faire
+		</p>
+		<ul>
+			<li>
+				Nouvelles photos du garage
+			</li>
+			<li>
+				❓ Analytics
+			</li>
+			<li>
+				❓ Remplacer Elfsight par l'API Graph de Facebook
+			</li>
+			<li>
+				❓ Sitemap et Google Search Console
+			</li>
+			<li>
+				✔ Structure de titres
+			</li>
+			<li>
+				✔ Titres trop courts : Ne pas modifier car changement dans code si modif titre
+			</li>
+			<li>
+				✔ Descriptions de pages</li>
+			<li>
+				Contenu de plus de 500 mots : Accueil, Actus, FAQ, Contact, Vente</li>
+			<li>
+				✔ Configurer la page Facebook : Impossible car profil et non page
+			</li>
+			<li>
+				Icone tactile 310*310px
+			</li>
+			<li>
+				JS : Produits moto, clic couleur = photo
+			</li>
+			<li>
+				Carrousels en pages services
+			</li>
+			<li>
+				Remplacer les
+					&lt;font &gt; &lt;/font	&gt; par des &lt;span &gt; &lt;/span &gt; + CSS : à faire en back, ok front
+			</li>
+			<li>
+				1 checkbox par table avec 1 pour affichage en front-end, O pour ne pas afficher
+			</li>
+			<li>
+				Image modifiée, unlike the previous one (name différent de l'upload)
+			</li>
+			<li>
+				Modifier le path de 'supprimer' dans 'edit'
+			</li>
+			<li>
+				Redimensionnement des images à l'upload
+			</li>
+			<li>
+				Slugify : Eviter d'utiliser les ID dans les URL
+			</li>
+			<li>
+				Coloris et modèles de moto 2021
+			</li>
+			<li>
+				robots.txt ignore /admin ?
+			</li>
+			<li>
+				Rangements :
+				<ul>
+					<li>Séparer les vues front et back office (Modifier les paths dans les contrôleurs)</li>
+					<li>Séparer les contrôleurs front et back office (Modifier les namespaces)</li>
+					<li>Placer img, css, js, fonts dans public>assets + modif paths (asset())</li>
+				</ul>
+			</li>
+
+			<li>
+				Bugs :
+				<ul>
+					<li>Bouton téléphone sur services, occasions, show :
+						&lt;div class='phone-services'	&gt;
+							&lt;i class='fa fa-phone'	&gt;
+						&lt;/div	&gt;
+					</li>
+				</li>
+			</li>
+			<li> Page Show : Affichage Aides si existantes sinon rien, problème avec ManyToMany</li>
+			<li> Formatage des prénoms composés dans le formulaire de contact</li>
+			<li> RWD dans le back-office</li>
+			<li> ✔ Préfixer le CSS : IE, Mozilla</li>
+			<li> Template vente>marque : if pour n'afficher que benelli, brixton, occasion ?</li>
+		</ul>
+	</li>
+</ul></div>{# * afficher ici Analytics #}</main>{% endblock %}

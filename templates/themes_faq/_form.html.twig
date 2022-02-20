@@ -1,0 +1,8 @@
+{{ form_start(form) }}
+    {{form_label (form.theme_question)}} <font style="color:red">*</font>
+    {{form_widget (form.theme_question)}}
+
+    {{ form_widget(form) }}
+
+<button class="btn btn-info mt-3">{{ button_label|default('Enregistrer') }}</button>
+{{ form_end(form) }}
