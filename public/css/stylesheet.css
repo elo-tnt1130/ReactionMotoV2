@@ -11,7 +11,8 @@
 
 @font-face {
   font-family: "roboto";
-  src: url("/css/fonts/Roboto-Regular.ttf"), url("/css/fonts/Roboto-Regular.woff"),
+  src: url("/css/fonts/Roboto-Regular.ttf"),
+    url("/css/fonts/Roboto-Regular.woff"),
     url("/css/fonts/Roboto-Regular.woff2");
   font-weight: normal;
   font-style: normal;
@@ -140,11 +141,13 @@ a.nav-link {
   font-family: "brandontext", Tahoma, "DejaVu Sans", sans-serif;
 }
 
-a.nav-link:hover, a.dropdown-toggle:focus {
+a.nav-link:hover,
+a.dropdown-toggle:focus {
   background-color: #cc0000 !important;
 }
 
-a.nav-link:focus, a.dropdown-item:hover,
+a.nav-link:focus,
+a.dropdown-item:hover,
 li.active {
   background-color: #4a4bdb;
 }
@@ -182,6 +185,15 @@ li.active {
 /*                                   FOOTER                                   */
 /* -------------------------------------------------------------------------- */
 
+nav.fixed-bottom {
+  box-shadow: 0px -3px 6px 0px rgba(0, 0, 0, 0.16);
+  -o-box-shadow: 0px -3px 6px 0px rgba(0, 0, 0, 0.16);
+  -webkit-box-shadow: 0px -3px 6px 0px rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 0px -3px 6px 0px rgba(0, 0, 0, 0.16);
+  -ms-box-shadow: 0px -3px 6px 0px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px -3px 6px 0px rgba(0, 0, 0, 0.16);
+}
+
 footer > nav > ul > li > a.nav-link {
   color: #cc0000 !important;
   font-size: 0.8rem;
@@ -192,16 +204,17 @@ a.footer-link {
   font-size: 0.8rem;
 }
 
-a.footer-link:hover, a.focused:focus {
+a.footer-link:hover,
+a.focused:focus {
   background-color: #4a4bdb !important;
 }
 
-nav>iframe {
+nav > iframe {
   text-align: center !important;
 }
 
 #footerLinks {
-  display: none ;
+  display: none;
 }
 /* -------------------------------------------------------------------------- */
 /*                                    VENTE                                   */
@@ -218,8 +231,8 @@ nav>iframe {
 
 .card-body {
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   height: 100%;
   /* background-color: #dddddd !important; */
 }
@@ -238,9 +251,8 @@ h3.card-title {
   left: 15%;
 }
 
-.img-catalogue
-{
-  width : 25% !important;
+.img-catalogue {
+  width: 25% !important;
 }
 
 .img-brand {
@@ -274,7 +286,7 @@ h3.card-title {
   right: 2rem;
 }
 
-#dl{
+#dl {
   display: none;
 }
 
@@ -289,7 +301,7 @@ h3.card-title {
   color: #cc0000;
 }
 
-.clickable{
+.clickable {
   color: #cc0000;
 }
 
@@ -331,7 +343,7 @@ h3.card-title {
 .welcome-text {
   font-size: 1.2rem;
   background-color: rgba(204, 0, 0, 0.3);
-  max-width:100%;
+  max-width: 100%;
 }
 
 .resumes {
@@ -377,26 +389,27 @@ h3.card-title {
   background-color: #cc0000 !important;
 }
 
-.carousel-control-next, .carousel-control-prev {
+.carousel-control-next,
+.carousel-control-prev {
   color: #cc0000 !important;
   font-size: 2rem;
 }
 
-.position{
+.position {
   position: relative;
   top: 4.8rem;
 }
 
-.subtitle{
-font-size: 1.4rem;
+.subtitle {
+  font-size: 1.4rem;
 }
 
-.subtitle2{ 
+.subtitle2 {
   font-size: 1.1rem;
 }
 
-.float-right{
-  margin-right : 1rem!important;
+.float-right {
+  margin-right: 1rem !important;
 }
 
 /* #textWelcome, #carrouselHome{
@@ -406,8 +419,7 @@ font-size: 1.4rem;
 /*                                     FAQ                                    */
 /* -------------------------------------------------------------------------- */
 
-.faq
-{ 
+.faq {
   color: #333333 !important;
   font-weight: bold !important;
 }
@@ -439,14 +451,14 @@ font-size: 1.4rem;
   /* #carrouselHome, #textHome {
     display: none;
   } */
-  
 }
 
 /* Medium devices (tablets, 767.99px and up) */
 @media (min-width: 768px) {
   .phone-services,
   .phone-services-slide,
-  .phone, #dl-xs {
+  .phone,
+  #dl-xs {
     display: none;
   }
 
@@ -481,7 +493,7 @@ font-size: 1.4rem;
   } */
 
   #footerLinks {
-    display: flex ;
+    display: flex;
   }
 }
 
@@ -492,7 +504,8 @@ font-size: 1.4rem;
   .phone,
   #hr-contact,
   .separator-entretien,
-  .separator-prep, #dl-xs {
+  .separator-prep,
+  #dl-xs {
     display: none;
   }
 
@@ -530,7 +543,7 @@ font-size: 1.4rem;
   } */
 
   #footerLinks {
-    display: flex ;
+    display: flex;
   }
 }
 
@@ -541,7 +554,8 @@ font-size: 1.4rem;
   .phone,
   #hr-contact,
   .separator-entretien,
-  .separator-prep, #dl-xs {
+  .separator-prep,
+  #dl-xs {
     display: none;
   }
 
@@ -558,9 +572,8 @@ font-size: 1.4rem;
     border-left: 1px solid #cc0000;
   }
 
-  .img-catalogue
-  {
-    width : 40%;
+  .img-catalogue {
+    width: 40%;
   }
 
   .img-vente-home {
@@ -580,8 +593,6 @@ font-size: 1.4rem;
   } */
 
   #footerLinks {
-    display: flex ;
+    display: flex;
   }
-
 }
-
