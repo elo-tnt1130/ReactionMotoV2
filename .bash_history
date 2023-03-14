@@ -136,3 +136,29 @@ php app/console cache:clear
 /etc/7.4php.ini php/bin cache:clear
 /etc/php7.4.ini php/bin cache:clear
 /usr/bin/php7.4-cli bin/console cache:clear
+composer install --ignore-platform-reqs
+composer
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');
+php -r "if (hash_file('sha384', 'composer-setup.php') === 'e0012edf3e80b6978849f5eff0d4b4e4c79ff1609dd1e613307e16318854d24ae64f26d17af3ef0bf7cfb710ca74755a') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+php composer-setup.php
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');
+php -r "if (hash_file('sha384', 'composer-setup.php') === 'e0012edf3e80b6978849f5eff0d4b4e4c79ff1609dd1e613307e16318854d24ae64f26d17af3ef0bf7cfb710ca74755a') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+curl -sS https://getcomposer.org/installer | /usr/bin/php7.4-cli
+/usr/bin/php7.4-cli composer.phar
+/usr/bin/php7.4-cli composer.phar selfupdate
+compooser
+
+/usr/bin/php7.4-cli composer.phar composer
+/usr/bin/php7.4-cli composer
+/usr/bin/php7.4-cli composer.phar install --ignore-platform-reqs
+/usr/bin/php7.4-cli bin/console cache:clear
+/usr/bin/php7.4-cli bin/console cache:clear
+/usr/bin/php7.4-cli bin/console cache:clear
+/usr/bin/php7.4-cli bin/console cache:clear
+/usr/bin/php7.4-cli bin/console cache:clear
+/usr/bin/php7.4-cli bin/console cache:clear
+git status
+git status
+/usr/bin/php7.4-cli bin/console cache:clear
+/usr/bin/php7.4-cli bin/console update
+/
