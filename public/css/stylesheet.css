@@ -595,3 +595,10 @@ h3.card-title {
     display: flex;
   }
 }
+
+/* Extra small devices */
+@media (max-width: 767px) {
+  .page-footer {
+    display: none;
+  }
+}
