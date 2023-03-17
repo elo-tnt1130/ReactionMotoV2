@@ -215,6 +215,10 @@ nav > iframe {
 #footerLinks {
   display: none;
 }
+
+.page-footer {
+  display: none;
+}
 /* -------------------------------------------------------------------------- */
 /*                                    VENTE                                   */
 /* -------------------------------------------------------------------------- */
@@ -544,6 +548,10 @@ h3.card-title {
   #footerLinks {
     display: flex;
   }
+
+  .page-footer{
+    display: block;
+  }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
@@ -594,11 +602,8 @@ h3.card-title {
   #footerLinks {
     display: flex;
   }
-}
 
-/* Extra small devices */
-@media (max-width: 767px) {
   .page-footer {
-    display: none;
+    display: block;
   }
 }
