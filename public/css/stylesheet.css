@@ -415,9 +415,11 @@ h3.card-title {
   margin-right: 1rem !important;
 }
 
-/* #textWelcome, #carrouselHome{
-  display: none;
-} */
+section.welcome-text,
+section#carrouselHome {
+  display: none !important;
+}
+
 /* -------------------------------------------------------------------------- */
 /*                                     FAQ                                    */
 /* -------------------------------------------------------------------------- */
@@ -450,10 +452,6 @@ h3.card-title {
   .img-catalogue {
     width: 25% !important;
   }
-
-  /* #carrouselHome, #textHome {
-    display: none;
-  } */
 }
 
 /* Medium devices (tablets, 767.99px and up) */
@@ -490,10 +488,6 @@ h3.card-title {
   .img-vente-home {
     width: 55% !important;
   }
-
-  /* #textHome, #carrouselHome{
-    display:flex;
-  } */
 
   #footerLinks {
     display: flex;
@@ -541,15 +535,16 @@ h3.card-title {
     width: 60% !important;
   }
 
-  /* #textWelcome, #carrouselHome{
-    display:flex;
-  } */
-
   #footerLinks {
     display: flex;
   }
 
-  .page-footer{
+  section.welcome-text,
+  section#carrouselHome {
+    display: flex !important;
+  }
+
+  .page-footer {
     display: block;
   }
 }
@@ -595,12 +590,13 @@ h3.card-title {
     width: 70% !important;
   }
 
-  /* #textWelcome, #carrouselHome{
-    display:flex;
-  } */
-
   #footerLinks {
     display: flex;
+  }
+
+  section.welcome-text,
+  section#carrouselHome {
+    display: flex !important;
   }
 
   .page-footer {
