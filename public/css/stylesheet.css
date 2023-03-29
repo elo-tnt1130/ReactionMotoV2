@@ -96,8 +96,6 @@
 
 body {
   background-color: #eeeeee !important;
-  width: 100%;
-  /* overflow-x: hidden; */
 }
 
 h1,
@@ -193,7 +191,7 @@ nav.fixed-bottom {
   box-shadow: 0px -3px 6px 0px rgba(0, 0, 0, 0.16);
 }
 
-footer > nav > ul > li > a.nav-link {
+footer>nav>ul>li>a.nav-link {
   color: #cc0000 !important;
   font-size: 0.95rem;
 }
@@ -208,7 +206,7 @@ a.focused:focus {
   background-color: #4a4bdb !important;
 }
 
-nav > iframe {
+nav>iframe {
   text-align: center !important;
 }
 
@@ -219,6 +217,7 @@ nav > iframe {
 .page-footer {
   display: none;
 }
+
 /* -------------------------------------------------------------------------- */
 /*                                    VENTE                                   */
 /* -------------------------------------------------------------------------- */
@@ -237,7 +236,6 @@ nav > iframe {
   -ms-flex-pack: center;
   justify-content: center;
   height: 100%;
-  /* background-color: #dddddd !important; */
 }
 
 .card-img-top,
@@ -328,10 +326,6 @@ h3.card-title {
   top: 22.5rem;
 }
 
-.carousel-restore {
-  background-color: #dddddd;
-}
-
 .img-carousel-restore {
   max-height: 15rem;
 }
@@ -365,7 +359,6 @@ h3.card-title {
   margin-left: auto !important;
   margin-right: auto !important;
 }
-/* #c2bfbf */
 
 .img-actu-home {
   display: none;
@@ -379,13 +372,8 @@ h3.card-title {
   width: 35% !important;
 }
 
-/* .carousel-home{
-  max-height: 15rem;
-} */
-
 .img-carousel-home {
   max-width: 80%;
-  max-height: 13rem;
 }
 
 .carousel-indicators li {
@@ -438,9 +426,9 @@ section#carrouselHome {
     border-left: none;
   }
 
-  /* #carrouselHome, #textHome {
+  #carrouselHome, #textHome {
     display: none;
-  } */
+  }
 }
 
 /* Small devices (landscape phones, 576px and up) */
@@ -456,6 +444,7 @@ section#carrouselHome {
 
 /* Medium devices (tablets, 767.99px and up) */
 @media (min-width: 768px) {
+
   .phone-services,
   .phone-services-slide,
   .phone,
@@ -492,10 +481,16 @@ section#carrouselHome {
   #footerLinks {
     display: flex;
   }
+
+  section.welcome-text,
+  section#carrouselHome {
+    display: flex !important;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+
   .phone-services,
   .phone-services-slide,
   .phone,
@@ -551,6 +546,7 @@ section#carrouselHome {
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
+
   .phone-services,
   .phone-services-slide,
   .phone,

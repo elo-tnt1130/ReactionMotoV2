@@ -10,56 +10,60 @@
 {% endblock %}
 
 {% block body %}
-	<section class="carousel-restore position w-100 d-none d-md-flex" id="carrouselHome">
 
-		<div id="carouselHome" class="carousel slide carousel-restore carousel-fade" data-ride="carousel">
-			<ol class="carousel-indicators carousel-home">
-				{% for image in carrousel %}
-					<li data-target="#carouselHome" data-slide-to="{{loop.revindex0}}" {% if loop.index0 == 0 %} class="active" {% endif %}></li>
-				{% endfor %}
-			</ol>
-			<div class="carousel-inner carousel-restore">
-				{% for image in carrousel %}
-					{% if loop.index0 == 0 %}
-						<div class="carousel-item active">
-						{% else %}
-							<div class="carousel-item">
-							{% endif %}
+	<div class="d-flex row container-home">
+		<section class="carousel-restore position mx-auto w-100 d-none d-md-flex" id="carrouselHome">
 
-							{% if image %}
-								<img src="/img/{{image.libImg}}" class="d-block img-carousel-home mx-auto" alt="/img/{{image.descrImg}}">
+			<div id="carouselHome" class="carousel slide carousel-restore carousel-fade" data-ride="carousel">
+
+				<div class="carousel-inner carousel-restore">
+					{% for image in carrousel %}
+						{% if loop.index0 == 0 %}
+							<div class="carousel-item active">
 							{% else %}
-								<img src="/img/default.png" class="d-block img-carousel-home mx-auto" alt="/img/default.png">
-							{% endif %}
+								<div class="carousel-item">
+								{% endif %}
 
-						</div>
-					{% endfor %}
+								{% if image %}
+									<img src="/img/{{image.libImg}}" class="d-block img-carousel-home mx-auto" alt="/img/{{image.descrImg}}">
+								{% else %}
+									<img src="/img/default.png" class="d-block img-carousel-home mx-auto" alt="/img/default.png">
+								{% endif %}
+
+							</div>
+						{% endfor %}
+					</div>
+					<div>
+						<ol class="carousel-indicators carousel-home">
+							{% for image in carrousel %}
+								<li data-target="#carouselHome" data-slide-to="{{loop.revindex0}}" {% if loop.index0 == 0 %} class="active" {% endif %}></li>
+							{% endfor %}
+						</ol>
+						<a class="carousel-control-prev" href="#carouselHome" role="button" data-slide="prev">
+							<i class='fa fa-chevron-left'></i>
+							<span class="sr-only">Précédent</span>
+						</a>
+						<a class="carousel-control-next" href="#carouselHome" role="button" data-slide="next">
+							<i class='fa fa-chevron-right'></i>
+						</span>
+						<span class="sr-only">Suivant</span>
+					</a>
 				</div>
-				<a class="carousel-control-prev" href="#carouselHome" role="button" data-slide="prev">
-					<i class='fa fa-chevron-left'></i>
-					<span class="sr-only">Précédent</span>
-				</a>
-				<a class="carousel-control-next" href="#carouselHome" role="button" data-slide="next">
-					<i class='fa fa-chevron-right'></i>
-				</span>
-				<span class="sr-only">Suivant</span>
-			</a>
-		</div>
-	</section>
+			</div>
+		</section>
 
-	<section class="row justify-content-center px-4 py-2 welcome-text position d-none d-md-flex" id="textWelcome">
-		<div class="w-100 mx-4 pr-4 mt-3">
-			<p>{{ets.texteAccueil|raw}}</p>
-		</div>
-	</section>
-
+		<section class="justify-content-center w-100 px-4 py-2 welcome-text position d-none d-md-flex" id="textWelcome">
+			<div class="mx-4 pr-4 mt-3">
+					<p>{{ets.texteAccueil|raw}}</p>
+			</div>
+		</section>
+	</div>
 
 	<main
 		class="container d-flex row justify-content-around pb-5 container-home mb-5 pt-2 position">
 
 		<!-- SHORT RESUMES -->
-		<div
-			class="col-md-8 col-sm-12">
+		<div class="col-md-8 col-sm-12">
 			<h1></h1>
 			<!-- VENTE -->
 			<section class="d-flex row justify-content-around resumes">
@@ -177,8 +181,7 @@
 				<!-- ACTUS -->
 				<div class="col-md-4 col-sm-12 mb-5 mb-1">
 					<!-- provided by facebook -->
-					<!-- <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D100057339113354&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false&appId=517094206385362" width="340" height="500" style="border:none; overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe> -->
-						<script src="https://apps.elfsight.com/p/platform.js" defer> </script>
+					<!-- <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D100057339113354&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false&appId=517094206385362" width="340" height="500" style="border:none; overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe> --><script src="https://apps.elfsight.com/p/platform.js" defer> </script>
 					<div class="elfsight-app-cf719115-7e91-43ac-990a-eb2e6dd62418"></div>
 				</div>
 			</main>
