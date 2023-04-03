@@ -1,84 +1,154 @@
-<?xml version="1.0" encoding="UTF-8"?>
-	<urlset xmlns="http://www.google.com/schemas/sitemap/0.84" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-		<url>
-			<loc>http://reactionmoto.com/</loc>
-			<changefreq>weekly</changefreq>
-		</url>
-
-		<url>
-			<loc>http://reactionmoto.com/#</loc>
-			<changefreq>weekly</changefreq>
-		</url>
-
-		<url>
-			<loc>http://reactionmoto.com/vente/</loc>
-			<changefreq>weekly</changefreq>
-		</url>
-
-		<url>
-			<loc>http://reactionmoto.com/vente/benelli</loc>
-			<changefreq>weekly</changefreq>
-		</url>
-
-		<url>
-			<loc>http://reactionmoto.com/vente/brixton</loc>
-			<changefreq>weekly</changefreq>
-		</url>
-
-		<url>
-			<loc>http://reactionmoto.com/vente/occasions</loc>
-			<changefreq>weekly</changefreq>
-		</url>
-
-		<url>
-			<loc>http://reactionmoto.com/banc_puissance</loc>
-			<changefreq>weekly</changefreq>
-		</url>
-
-		<url>
-			<loc>http://reactionmoto.com/entretien</loc>
-			<changefreq>weekly</changefreq>
-		</url>
-
-		<url>
-			<loc>http://reactionmoto.com/restauration</loc>
-			<changefreq>weekly</changefreq>
-		</url>
-
-		<url>
-			<loc>http://reactionmoto.com/prepa_perso</loc>
-			<changefreq>weekly</changefreq>
-		</url>
-
-		<url>
-			<loc>http://reactionmoto.com/actus</loc>
-			<changefreq>weekly</changefreq>
-		</url>
-
-		<url>
-			<loc>http://reactionmoto.com/contact</loc>
-			<changefreq>weekly</changefreq>
-		</url>
-
-		<url>
-			<loc>http://reactionmoto.com/faq</loc>
-			<changefreq>weekly</changefreq>
-		</url>
-
-		<url>
-			<loc>http://reactionmoto.com/#carouselhome</loc>
-			<changefreq>weekly</changefreq>
-		</url>
-
-		<url>
-			<loc>http://reactionmoto.com/page/catalogue_marques</loc>
-			<changefreq>weekly</changefreq>
-		</url>
-
-		<url>
-			<loc>http://reactionmoto.com/mentions_legales</loc>
-			<changefreq>weekly</changefreq>
-		</url>
-
-	</urlset>
-
+﻿<?xml version="1.0" encoding="UTF-8"?>
+		<!--	created with www.mysitemapgenerator.com	-->
+		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+	<loc>https://reactionmoto.com/</loc>
+	<lastmod>2023-03-31T11:32:45+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://reactionmoto.com/vente/</loc>
+	<lastmod>2023-03-31T11:32:45+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://reactionmoto.com/vente/benelli</loc>
+	<lastmod>2023-03-31T11:32:45+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://reactionmoto.com/vente/brixton</loc>
+	<lastmod>2023-03-31T11:32:45+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://reactionmoto.com/vente/occasions</loc>
+	<lastmod>2023-03-31T11:32:45+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://reactionmoto.com/banc_puissance</loc>
+	<lastmod>2023-03-31T11:32:45+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://reactionmoto.com/entretien</loc>
+	<lastmod>2023-03-31T11:32:45+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://reactionmoto.com/restauration</loc>
+	<lastmod>2023-03-31T11:32:45+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://reactionmoto.com/prepa_perso</loc>
+	<lastmod>2023-03-31T11:32:45+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://reactionmoto.com/actus</loc>
+	<lastmod>2023-03-31T11:32:45+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://reactionmoto.com/contact</loc>
+	<lastmod>2023-03-31T11:32:45+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://reactionmoto.com/faq</loc>
+	<lastmod>2023-03-31T11:32:45+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://reactionmoto.com/mentions_legales</loc>
+	<lastmod>2023-03-31T11:32:45+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://reactionmoto.com/vente/showMoto/4</loc>
+	<lastmod>2023-03-31T11:32:48+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://reactionmoto.com/vente/showMoto/5</loc>
+	<lastmod>2023-03-31T11:32:48+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://reactionmoto.com/vente/showMoto/6</loc>
+	<lastmod>2023-03-31T11:32:48+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://reactionmoto.com/vente/showMoto/7</loc>
+	<lastmod>2023-03-31T11:32:48+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://reactionmoto.com/vente/showMoto/8</loc>
+	<lastmod>2023-03-31T11:32:48+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://reactionmoto.com/vente/showMoto/9</loc>
+	<lastmod>2023-03-31T11:32:48+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://reactionmoto.com/vente/showMoto/10</loc>
+	<lastmod>2023-03-31T11:32:48+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://reactionmoto.com/vente/showMoto/20</loc>
+	<lastmod>2023-03-31T11:32:49+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://reactionmoto.com/vente/showMoto/22</loc>
+	<lastmod>2023-03-31T11:32:49+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://reactionmoto.com/vente/showMoto/23</loc>
+	<lastmod>2023-03-31T11:32:49+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://reactionmoto.com/dl/pdf-752_S_full_60f1e2029423c.pdf</loc>
+	<lastmod>2023-03-31T11:32:52+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://reactionmoto.com/dl/pdf-BN125_60f1e3a9035ef.pdf</loc>
+	<lastmod>2023-03-31T11:32:52+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://reactionmoto.com/dl/pdf-Imp%C3%A9riale_400_60f1e46bc32c6.pdf</loc>
+	<lastmod>2023-03-31T11:32:53+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://reactionmoto.com/dl/pdf-502C_60f1e4f1adccb.pdf</loc>
+	<lastmod>2023-03-31T11:32:53+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://reactionmoto.com/dl/pdf-Sunray_125_60f1e5d6a5816.pdf</loc>
+	<lastmod>2023-03-31T11:32:53+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://reactionmoto.com/dl/pdf-Rayburn_125_60f1e5648be43.pdf</loc>
+	<lastmod>2023-03-31T11:32:53+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://reactionmoto.com/dl/pdf-752S_A2_60f1e307287ca.pdf</loc>
+	<lastmod>2023-03-31T11:32:55+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+</urlset>
