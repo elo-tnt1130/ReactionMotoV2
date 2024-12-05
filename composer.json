@@ -14,7 +14,7 @@
         "imagine/imagine": "1.2",
         "league/html-to-markdown": "^5.0",
         "sensio/framework-extra-bundle": "^6.1",
-        "swiftmailer/swiftmailer": "6.1",
+        "swiftmailer/swiftmailer": "6.3.0",
         "symfony/apache-pack": "^1.0",
         "symfony/asset": "5.3.*",
         "symfony/console": "5.3.*",
